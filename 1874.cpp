@@ -9,9 +9,11 @@ int n;
 
 void go(int i) {
 cout<<"--------"<<i<<"--------\n";
-    if(s.empty()) {
+
+    if(s.empty()==1) {
         s.push(i);
-        cout<<"++"<<"\n";
+        cout<<"+"<<"\n";
+        return;
     } else if(import.front()==s.top()) {
         s.pop();
         import.pop();
@@ -20,7 +22,19 @@ cout<<"--------"<<i<<"--------\n";
     } else {
         s.push(i);
         cout<<"+"<<"\n";
+        return;
     } 
+
+    if(i==n && s.empty()==0 && import.empty()==0) {
+        cout<<"+++++++++++++"<<"\n";
+        if(import.front()==s.top()) {
+            return go(i);
+        } else {
+            cout<<"NO"<<"\n";
+            return;
+        }
+    }
+
 }
 
 int main() {
@@ -35,11 +49,4 @@ int main() {
     for(int i=1; i<=n; i++) {
         go(i);
     }
-
-    if(s.empty() && import.empty()) {
-        cout<<"NOOOOOOO"<<"\n";
-    } else {
-        cout<<"NO"<<"\n";
-    }
-    
 }
