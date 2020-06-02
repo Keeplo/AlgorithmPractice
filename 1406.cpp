@@ -6,18 +6,33 @@ string s;
 int cur;
 
 void go(char c, char a = '\0') {
-    if(c=="P") { 
-        if(cur==0) return;
-        // 왼쪽 문자 - 
+    cout<<"commend : "<< c <<"\n";
+    cout<<"cursor : "<< cur <<"\n";
+    if(c=="P") {            // 왼쪽 문자 - 
+        if(cur==0)  { 
+            return;
+        } else if() {
+            
+        } else {
+            cout<<"before : "<<s<<"\n";
+            string temp;
+            temp = s;
+            temp.resize(cur-2);
+            s = temp + s.substr(cur-1);;
+            cout<<"after : "<<s<<"\n";
+        }
     } else {
-        if(c=="L") {
+        if(c=="L") {        // 커서 왼쪽으로 한칸
             if(cur==0) return;
             else cur--;
-        } else if(c=="B") {
+        } else if(c=="B") { // 오른쪽 문자 - 
+            if(cur==s.size()+2) return;
+            else {
 
-            // 오른쪽 문자 - 
-        } else if(c=="D") {
-
+            }
+        } else if(c=="D") { // 커서 오른쪽으로 한칸
+            if(cur==s.size()+2) return;
+            else cur++;
         } else cout<<"------------error---------------"<<"\n";
     }
 }
