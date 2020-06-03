@@ -1,59 +1,46 @@
 #include<iostream>
 #include<string>
+#include<list>
 
 using namespace std;
-string s;
-int cur;
-
-void go(char c, char a = '\0') {
-    cout<<"commend : "<< c <<"\n";
-    cout<<"cursor : "<< cur <<"\n";
-    if(c=="P") {            // 왼쪽 문자 - 
-        if(cur==0)  { 
-            return;
-        } else if() {
-            
-        } else {
-            cout<<"before : "<<s<<"\n";
-            string temp;
-            temp = s;
-            temp.resize(cur-2);
-            s = temp + s.substr(cur-1);;
-            cout<<"after : "<<s<<"\n";
-        }
-    } else {
-        if(c=="L") {        // 커서 왼쪽으로 한칸
-            if(cur==0) return;
-            else cur--;
-        } else if(c=="B") { // 오른쪽 문자 - 
-            if(cur==s.size()+2) return;
-            else {
-
-            }
-        } else if(c=="D") { // 커서 오른쪽으로 한칸
-            if(cur==s.size()+2) return;
-            else cur++;
-        } else cout<<"------------error---------------"<<"\n";
-    }
-}
 
 int main() {
+    string s;
+    int n, cursor;
 
     cin>>s;
 
-    cur = s.size();
-    
-    int n;
+    list<char> editor(s.begin(), s.end());
+    cursor = s.end();
 
     cin>>n;
 
-    for(int i=0; i<n; i++) {
-        char commend, add;
-        cin>>commend;
-        if(c=="P") { 
-            cin>>add;
-            go(commend, add);
-        } else go(commend);
+    while(n--) {
+        string cmd;
+
+        cin>>cmd;
+
+        if(cmd=="L") {
+            if(cursor>0) cursor--;
+        } else if(cmd=="D") {
+            if(cursor<editor.size()) cursor++;
+        } else if(cmd=="B") {
+            if(cursor>0) {
+                editor.erase(cursor-1);
+                cursor--;
+            }
+        } else if(cmd=="P") {
+            string insert;
+            cin>>insert;
+
+            if(cursor<editor.size()) {
+                editor.insert(cursor-1, insert);
+                cursor++;
+            } else {
+                editor.push_back(insert);
+                cursor++;
+            }
+        }
     }
 
     cout<<s<<"\n";
