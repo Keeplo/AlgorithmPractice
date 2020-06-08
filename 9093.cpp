@@ -1,61 +1,50 @@
 #include<iostream>
-#include<algorithm>
+#include<stack>
+#include<string>
 
 using namespace std;
-
-void go(string str) {
- cout<< str<<"\n";
-    /*
-cout<<str<<"\n";
-    if(str.length() == 0) 
-        cout<<"2"<<"\n"; return ;
-
-    string temp;
-   
-    temp = str;
-    cout<<"3"<<"\n";
-    reverse(temp.begin(), temp.end());
-    cout<<"4"<<"\n";
-    cout<< temp << " ";
-cout<<"5"<<"\n";
-    str.erase(temp.begin(), temp.end());
-    cout<<"6"<<"\n";
-    go(str);
-    cout<<"7"<<"\n";
-    */
-}
-
 
 int main() {
     int n;
 
     cin>>n;
 
-    string state[n];
+    string s[n];
+
+    cout<<"----"<<n<<"----\n";
 
     for(int i=0; i<n; i++) {
-        cin>>state[n];
-        go(state[i]);
-        cout<<"\n";
+        
+        getline(cin, s[i]);
+
+        stack<string> stk;
+        if(i == 0) continue;
+        else {
+            for(int j=0; j<s[i].size(); j++) {
+            string tmp;
+            tmp = s[i][j];
+            if(tmp==" ") {
+                for(int k=0; stk.size() != 0; k++) {
+                    if(stk.size()==0) cout<<"error!!!!!\n";
+                    else {
+                        cout<<stk.top();
+                        stk.pop();
+                    }
+                }
+                cout<<" ";
+            } else {
+                stk.push(tmp);
+            }
+            }
+            for(int k=0; stk.size() != 0; k++) {
+                        if(stk.size()==0) cout<<"error!!!!!\n";
+                        else {
+                            cout<<stk.top();
+                            stk.pop();
+                        }
+            }
+        }
     }
 }
-/*
-
-int main() {
-    string str;
-
-    cin>>str;
-
-    str.erase(0,3);
-
-    cout<< str << "\n";
-
-    str.erase(0, 2);
-    if( str.length() == 0)
-        cout<< "A" << "\n";
-    else 
-        cout<< "C" << "\n";
-}
-*/
 
 
