@@ -11,7 +11,7 @@ int main() {
     cin>>s;
 
     list<char> editor(s.begin(), s.end());
-    cursor = s.end();
+    cursor = s.size();
 
     cin>>n;
 
