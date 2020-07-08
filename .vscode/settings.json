@@ -2,6 +2,16 @@
     "C_Cpp.errorSquiggles": "Disabled",
     "files.associations": {
         "stack": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "iosfwd": "cpp",
+        "istream": "cpp",
+        "deque": "cpp",
+        "functional": "cpp",
+        "list": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "vector": "cpp",
+        "iterator": "cpp",
+        "algorithm": "cpp"
     }
 }
