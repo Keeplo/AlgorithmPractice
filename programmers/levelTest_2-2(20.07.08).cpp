@@ -32,5 +32,5 @@ int main() {
         temp.clear();
     }
 
-    return answer;
+    return 0;
 }
