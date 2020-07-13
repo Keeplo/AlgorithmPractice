@@ -10,7 +10,7 @@ void solve(double meal_cost, int tip_percent, int tax_percent) {
 
     tip = (double)tip_percent/100 * meal_cost;
     tax = (double)tax_percent/100 * meal_cost;
-    totalCost = ceil(tip + tax + meal_cost);
+    totalCost = floor(tip + tax + meal_cost + 0.5);
     cout<<totalCost<<"\n";
 
 }
