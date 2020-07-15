@@ -20,10 +20,13 @@ int main() {
 
     cin.ignore();
     getline(cin, input);
+    
     // Print the sum of both integer variables on a new line.
     cout<<i+numInteger<<"\n";
+
     // Print the sum of the double variables on a new line.
     printf("%.1lf\n", d+numDouble);
+
     // Concatenate and print the String variables on a new line
     // The 's' variable above should be printed first.
     cout<<s+input<<"\n";
