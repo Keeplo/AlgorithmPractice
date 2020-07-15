@@ -1,3 +1,6 @@
+// 프로그래머스 코딩테스트 연습 - 스택/큐 - 쇠막대기
+// 백준 No. 10799 - 쇠막대기
+
 #include <string>
 #include <iostream>
 #include <vector>
