@@ -24,12 +24,13 @@ int main() {
     }
 
     string seekName;
+    int a;
     while(cin>>seekName) {
         if(finder.find(seekName)==finder.end()) {
             cout<<"Not found"<<"\n";
         } else {
             cout<<seekName<<"="<<finder.find(seekName)->second<<"\n";
         }
-    }
+    }    
     return 0;
 }
