@@ -8,24 +8,26 @@
 
 import Foundation
 
-// Complete the factorial function below.
-func factorial(n: Int) -> Int {
-    if(n>1) {
-        return n*factorial(n: n-1)
-    } else {
-        return 1
-    }
+let n = Int(readLine()!)!
+
+//var phoneBook = [String: Int]()
+//var phoneBook :Dictionary<String, Int> = Dictionary()
+
+for _ in 0...n - 1 {
+    // read contacts into phone book
+    var contact = readLine()!.characters.split(separator: " ").map(String.init)
+    phoneBook[contact[0]] = contact[1]
 }
 
-let stdout = ProcessInfo.processInfo.environment["OUTPUT_PATH"]!
+var queryName = readLine()
+while queryName != nil {
+    if let number = phoneBook[queryName!] {
+        print("\(queryName!)=\(phoneBook[queryName!]!)")
+    }
+    else {
+        print("Not found")
+    }
+    queryName = readLine()
+}
 
-FileManager.default.createFile(atPath: stdout, contents: nil, attributes: nil)
-let fileHandle = FileHandle(forWritingAtPath: stdout)!
 
-guard let n = Int((readLine()?.trimmingCharacters(in: .whitespacesAndNewlines))!)
-else { fatalError("Bad input") }
-
-let result = factorial(n: n)
-
-fileHandle.write(String(result).data(using: .utf8)!)
-fileHandle.write("\n".data(using: .utf8)!)
