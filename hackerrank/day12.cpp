@@ -10,7 +10,7 @@ class Person{
 		string lastName;
 		int id;
 	public:
-		Person(string firstName, string lastName, int identification){
+		Person(string firstName, string lastName, int identification) {
 			this->firstName = firstName;
 			this->lastName = lastName;
 			this->id = identification;
