@@ -46,7 +46,7 @@ int main() {
         if (obj.popCharacter() != obj.dequeueCharacter()) {
             isPalindrome = false;
             
-            break;
+            break;s
         }
     }
     
