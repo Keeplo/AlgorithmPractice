@@ -1,42 +1,38 @@
+// C++ Practice : Classes and Objects
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
 #include <iostream>
-#include <sstream>
-#include <string>
+#include <algorithm>
+#include <cassert>
 using namespace std;
 
-class Student {
-    private:
-        int age, standard;
-        string first_name, last_name;
-    public:
-        void set_age(int age) { this->age = age; }
-        int get_age() { return this->age; }
-        void set_first_name(string first_name) { this->first_name = first_name; }
-        string get_first_name() { return this->first_name; }
-        void set_last_name(string last_name) { this->last_name = last_name; }
-        string get_last_name() { return this->last_name; }
-        void set_standard(int standard) { this->standard = standard; }
-        int get_standard() { return this->standard; }
-        string to_string() { return ::to_string(age)+","+first_name+","+last_name+","+::to_string(standard); }
-};
+// Write your Student class here
 
 int main() {
-    int age, standard;
-    string first_name, last_name;
+    int n; // number of students
+    cin >> n;
+    Student *s = new Student[n]; // an array of n students
     
-    cin >> age >> first_name >> last_name >> standard;
-    
-    Student st;
+    for(int i = 0; i < n; i++){
+        s[i].input();
+    }
 
-    st.set_age(age);
-    st.set_standard(standard);
-    st.set_first_name(first_name);
-    st.set_last_name(last_name);
-    
-    cout << st.get_age() << "\n";
-    cout << st.get_last_name() << ", " << st.get_first_name() << "\n";
-    cout << st.get_standard() << "\n";
-    cout << "\n";
-    cout << st.to_string();
+    // calculate kristen's score
+    int kristen_score = s[0].calculateTotalScore();
+
+    // determine how many students scored higher than kristen
+    int count = 0; 
+    for(int i = 1; i < n; i++){
+        int total = s[i].calculateTotalScore();
+        if(total > kristen_score){
+            count++;
+        }
+    }
+
+    // print result
+    cout << count;
     
     return 0;
 }

@@ -1,10 +1,7 @@
-#include <cmath>
-#include <cstdio>
-#include <vector>
-#include <iostream>
-#include <algorithm>
-using namespace std;
+// C++ Practice : Input and Output
 
+#include <iostream>
+using namespace std;
 
 int main() {
     int a[3];
