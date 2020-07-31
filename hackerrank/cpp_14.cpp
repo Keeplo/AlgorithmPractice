@@ -9,6 +9,19 @@
 using namespace std;
 
 // Write your Student class here
+class Student {
+    public:
+        vector<int> scores;
+
+        void input() {
+            for(int i=0; i<5; i++) {
+                int i;
+                cin>>i;
+                this->scores.push_back(i);
+            }
+        }
+}
+
 
 int main() {
     int n; // number of students

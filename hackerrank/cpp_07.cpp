@@ -1,3 +1,5 @@
+// C++ Practice : Pointer
+
 #include <stdio.h>
 
 void update(int *a,int *b) {

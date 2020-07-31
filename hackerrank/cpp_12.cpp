@@ -1,26 +1,24 @@
-// C++ Practice : String
+// C++ Practice : Structs
 
+#include <cmath>
+#include <cstdio>
+#include <vector>
 #include <iostream>
-#include <string>
+#include <algorithm>
 using namespace std;
 
+struct Student {
+    int age, standard;
+    string first_name, last_name;
+
+};
+
 int main() {
-	string a, b;
-    string tmp1, tmp2;
+    Student st;
+    
+    cin >> st.age >> st.first_name >> st.last_name >> st.standard;
 
-    getline(cin, a);
-    getline(cin, b);
-
-    cout<<a.size()<<" "<<b.size()<<"\n";
-    cout<<a+b<<"\n";
-
-    tmp1 = a[0];
-    tmp2 = b[0];
-
-    a.replace(0, 1, tmp2);
-    b.replace(0, 1, tmp1);
-
-    cout<<a<<" "<<b<<"\n";
-
+    cout << st.age << " " << st.first_name << " " << st.last_name << " " << st.standard;
+    
     return 0;
 }
