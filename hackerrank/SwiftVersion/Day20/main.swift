@@ -17,9 +17,7 @@ var numberOfSwaps = 0
 for _ in 0..<n {
     for j in 0..<n-1 {
         if(arr[j]>arr[j+1]) {
-            let tmp = arr[j+1]
-            arr[j+1] = arr[j]
-            arr[j] = tmp
+            arr.swapAt(j, j+1)
             numberOfSwaps += 1
         }
     }
