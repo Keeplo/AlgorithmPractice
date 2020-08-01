@@ -13,6 +13,7 @@
         "vector": "cpp",
         "iterator": "cpp",
         "algorithm": "cpp",
-        "type_traits": "cpp"
+        "type_traits": "cpp",
+        "cmath": "cpp"
     },
 }
