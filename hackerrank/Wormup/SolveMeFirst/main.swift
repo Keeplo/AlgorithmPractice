@@ -6,7 +6,14 @@
 //  Copyright © 2020 Yongwoo Marco Kim. All rights reserved.
 //
 
-import Foundation
+// https://www.hackerrank.com/challenges/solve-me-first/problem
 
-print("Hello, World!")
+// read integers line by line
+
+var a = Int(readLine()!)!
+var b = Int(readLine()!)!
+
+
+// Hint: Type print(a + b) below
+print (a + b)
 
