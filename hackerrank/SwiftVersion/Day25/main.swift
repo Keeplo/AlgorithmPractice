@@ -9,6 +9,10 @@
 import Foundation
 
 func isPrime(num: Int) -> Bool {
+    if(num<4) {
+        if(num==1) { return false }
+        else { return true }
+    }
     for i in 2...Int(sqrt(Double(num))) {
         if(num % i == 0) { return false }
     }
