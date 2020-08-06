@@ -10,19 +10,8 @@ import Foundation
 
 let t = Int(readLine()!)!
 var numberArr[t] = [Int64]()
-var biggestNum = 0
 
 for i in 0..<t {
     numberArr[i] = readLine()!
-    if(numberArr[i]>biggestNum) numberArr[i] = biggestNum
 }
 
-var check[biggestNum] = false
-
-for i in 0..<t {
-    for j in i...biggestNum {
-        if() {
-            
-        }
-    }
-}
