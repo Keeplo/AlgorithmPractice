@@ -8,10 +8,18 @@
 
 import Foundation
 
-let t = Int(readLine()!)!
-var numberArr[t] = [Int64]()
-
-for i in 0..<t {
-    numberArr[i] = readLine()!
+func isPrime(num: Int) -> Bool {
+    for i in 2...Int(sqrt(Double(num))) {
+        if(num % i == 0) { return false }
+    }
+    return true
 }
 
+let t = Int(readLine()!)!
+var numberArr = [Int](repeating: 0, count: t)
+
+for i in 0..<t {
+    numberArr[i] = Int(readLine()!)!
+    if(numberArr[i]>=2 && isPrime(num: numberArr[i])) { print("Prime") }
+    else { print( "Not prime ") }
+}
