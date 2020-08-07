@@ -22,7 +22,7 @@ for _ in 1...N {
     
     
     if(emailID.range(of: "@gmail.com") != nil) {
-        resultNames.append(firstName)
+  q      resultNames.append(firstName)
     }
 }
 
