@@ -8,5 +8,26 @@
 
 import Foundation
 
-print("Hello, World!")
+guard let N = Int((readLine()?.trimmingCharacters(in: .whitespacesAndNewlines))!)
+else { fatalError("Bad input") }
+
+var resultNames = [String]()
+
+for _ in 1...N {
+    guard let firstNameEmailIDTemp = readLine() else { fatalError("Bad input") }
+    let firstNameEmailID = firstNameEmailIDTemp.split(separator: " ").map{ String($0) }
+
+    let firstName = firstNameEmailID[0]
+    let emailID = firstNameEmailID[1]
+    
+    
+    if(emailID.range(of: "@gmail.com") != nil) {
+        resultNames.append(firstName)
+    }
+}
+
+resultNames.sort();
+for name in resultNames {
+    print(name)
+}
 
