@@ -6,14 +6,9 @@
 //  Copyright © 2020 Yongwoo Marco Kim. All rights reserved.
 //
 
-/*
-var c = MyFancyCollection([10, 20, 30, 40, 50])
-var i = c.startIndex
-while i != c.endIndex {
-    c[i] /= 5
-    i = c.index(after: i)
-}*/
+// https://www.hackerrank.com/challenges/reduced-string/problem
 
+// Super Reduced String
 
 import Foundation
 

@@ -10,16 +10,27 @@ import Foundation
 
 // Complete the twoStrings function below.
 func twoStrings(s1: String, s2: String) -> String {
+    var checkChar = [String.Element]()
     if(s1.count > s2.count) {
         for c in s2 {
-            if(s1.range(of: String(c)) != nil) {
-                return "YES"
+            if(checkChar.contains(c)) {
+                continue
+            } else {
+                if(s1.range(of: String(c)) != nil) {
+                    return "YES"
+                }
+                checkChar.append(c)
             }
         }
     } else {
         for c in s1 {
-            if(s2.range(of: String(c)) != nil) {
-                return "YES"
+            if(checkChar.contains(c)) {
+                continue
+            } else {
+                if(s2.range(of: String(c)) != nil) {
+                    return "YES"
+                }
+                checkChar.append(c)
             }
         }
     }
