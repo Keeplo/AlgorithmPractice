@@ -6,6 +6,9 @@
 //  Copyright © 2020 Yongwoo Marco Kim. All rights reserved.
 //
 
+// 소수 찾기
+// https://programmers.co.kr/learn/courses/30/lessons/12921
+
 import Foundation
 
 func solution(_ n:Int) -> Int {

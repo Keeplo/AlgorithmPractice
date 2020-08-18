@@ -6,7 +6,16 @@
 //  Copyright © 2020 Yongwoo Marco Kim. All rights reserved.
 //
 
+// 짝수와 홀수
+
+// https://programmers.co.kr/learn/courses/30/lessons/12937
+
 import Foundation
 
-print("Hello, World!")
+func solution(_ num:Int) -> String {
+    return num%2 == 0 ? "Even" : "Odd"
+}
 
+let num = Int(readLine()!)
+
+print(solution(num!))

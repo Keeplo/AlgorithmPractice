@@ -6,6 +6,9 @@
 //  Copyright © 2020 Yongwoo Marco Kim. All rights reserved.
 //
 
+// 자릿수 더하기
+// https://programmers.co.kr/learn/courses/30/lessons/12931
+
 import Foundation
 
 func solution(_ n:Int) -> Int {
