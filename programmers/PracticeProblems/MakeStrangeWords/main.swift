@@ -6,6 +6,10 @@
 //  Copyright © 2020 Yongwoo Marco Kim. All rights reserved.
 //
 
+// 이상한 문자 만들기
+
+//https://programmers.co.kr/learn/courses/30/lessons/12930
+
 import Foundation
 
 func solution(_ s:String) -> String {
@@ -13,12 +17,14 @@ func solution(_ s:String) -> String {
     let arr = s.components(separatedBy: " ")
     
     for s in arr {
-        for i in 0...s.count-1 {
+        for i in 0..<s.count {
             let c = s[s.index(s.startIndex, offsetBy: i)]
-            if((i+1)%2==1) { // 홀수번 째
-                c.asciiValue! > UInt8(96) && c.asciiValue! < UInt8(123) ? result.append(c.uppercased()) : result.append(c)
-            } else {         // 짝수번 째
-                c.asciiValue! < UInt8(91) && c.asciiValue! > UInt8(64) ? result.append(c.lowercased()) : result.append(c)
+            if(i%2 == 1) {    // 1 3 5 대문자
+                //c.asciiValue! < UInt8(91) ? result.append(c.lowercased()) : result.append(c)
+                result.append(c.lowercased())
+            } else {          // 0 2 4 소문자
+                //c.asciiValue! > UInt8(96) ? result.append(c.uppercased()) : result.append(c)
+                result.append(c.uppercased())
             }
         }
         result.append(" ")
