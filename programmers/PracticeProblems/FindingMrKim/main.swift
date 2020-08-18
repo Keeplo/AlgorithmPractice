@@ -6,6 +6,10 @@
 //  Copyright © 2020 Yongwoo Marco Kim. All rights reserved.
 //
 
+// 서울에서 김서방 찾기
+
+// https://programmers.co.kr/learn/courses/30/lessons/12919
+
 import Foundation
 
 func solution(_ seoul:[String]) -> String {
