@@ -13,8 +13,13 @@
 import Foundation
 
 func solution(_ s:String) -> Bool {
-    for i in 
-    return
+    
+    for c in s {
+        if(!c.isNumber || (s.count == 4 || s.count == 6)) {
+            return false
+        }
+    }
+    return true
 }
 
 let str = readLine()!
