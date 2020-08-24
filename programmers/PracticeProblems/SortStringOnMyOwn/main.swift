@@ -6,6 +6,10 @@
 //  Copyright © 2020 Yongwoo Marco Kim. All rights reserved.
 //
 
+// 문자열 내 마음대로 정렬하기
+
+// https://programmers.co.kr/learn/courses/30/lessons/12915
+
 import Foundation
 
 func solution(_ strings:[String], _ n:Int) -> [String] {
