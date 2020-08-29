@@ -11,8 +11,6 @@ import Foundation
 func solution(_ n:Int, _ lost:[Int], _ reserve:[Int]) -> Int {
     var students = [Int](repeating: 0, count: n)
     
-    stu
-    œœœ
     return 0
 }
 

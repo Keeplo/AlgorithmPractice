@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+
+for _ in 0..<b {
+    print(Array(repeating: "*", count: a).joined())
+}

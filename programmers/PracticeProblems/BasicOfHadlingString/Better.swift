@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+func solution(_ s:String) -> Bool {
+    guard let _: Int = Int(s), (s.count == 4 || s.count == 6) else {
+        return false
+    }
+    return true
+}
+
+func solution(_ s:String) -> Bool {
+    return (Int(s) != nil && (s.count == 4 || s.count == 6)) ? true : false
+}
