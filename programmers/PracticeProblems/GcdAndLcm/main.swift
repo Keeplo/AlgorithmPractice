@@ -6,6 +6,10 @@
 //  Copyright © 2020 Yongwoo Marco Kim. All rights reserved.
 //
 
+// 최대공약수와 최소공배수
+
+// https://programmers.co.kr/learn/courses/30/lessons/12940/solution_groups?language=swift
+
 import Foundation
 
 // 최대공약수
@@ -23,4 +27,4 @@ func solution(_ n:Int, _ m:Int) -> [Int] {
 
 let arr = readLine()!.components(separatedBy: " ").map({ Int($0)! })
 
-print(solution(arr[0], arr[1]))
+print(solution(arr[0], arr[1]))  

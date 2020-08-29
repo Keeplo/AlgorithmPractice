@@ -21,3 +21,4 @@ func solution(_ x:Int) -> Bool {
 let x = Int(readLine()!)
 
 print(solution(x!))
+  
