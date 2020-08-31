@@ -22,3 +22,4 @@ let x = Int(readLine()!)
 
 print(solution(x!))
   
+  
