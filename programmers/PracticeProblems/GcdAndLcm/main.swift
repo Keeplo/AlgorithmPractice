@@ -28,4 +28,4 @@ func solution(_ n:Int, _ m:Int) -> [Int] {
 let arr = readLine()!.components(separatedBy: " ").map({ Int($0)! })
 
 print(solution(arr[0], arr[1]))  
-  
+  /
