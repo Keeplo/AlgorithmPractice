@@ -9,18 +9,22 @@
 // 행렬의 덧셈
 
 // https://programmers.co.kr/learn/courses/30/lessons/12950
+// https://keeplo.tistory.com/86
 
 import Foundation
 
 func solution(_ arr1:[[Int]], _ arr2:[[Int]]) -> [[Int]] {
     var result = [[Int]]()
+    
     for i in 0..<arr1.count {
         var middle = [Int]()
+        
         for j in 0..<arr1[0].count {
             middle.append(arr1[i][j]+arr2[i][j])
         }
         result.append(middle)
     }
+    
     return result
 }
 
