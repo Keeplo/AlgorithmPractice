@@ -10,6 +10,8 @@
 
 // https://programmers.co.kr/learn/courses/30/lessons/12947
 
+// https://keeplo.tistory.com/91
+
 import Foundation
 
 func solution(_ x:Int) -> Bool {
