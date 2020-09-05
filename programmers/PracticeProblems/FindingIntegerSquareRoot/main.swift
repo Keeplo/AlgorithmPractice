@@ -10,6 +10,8 @@
 
 // https://programmers.co.kr/learn/courses/30/lessons/12934
 
+// https://keeplo.tistory.com/97
+
 import Foundation
 
 func solution(_ n:Int64) -> Int64 {
