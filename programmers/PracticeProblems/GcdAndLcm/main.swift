@@ -10,6 +10,8 @@
 
 // https://programmers.co.kr/learn/courses/30/lessons/12940/solution_groups?language=swift
 
+// https://keeplo.tistory.com/94
+
 import Foundation
 
 // 최대공약수
