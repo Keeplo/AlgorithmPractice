@@ -10,8 +10,11 @@
 
 // https://programmers.co.kr/learn/courses/30/lessons/12933
 
+// https://keeplo.tistory.com/97
+
 import Foundation
 
+/*
 func solution(_ n:Int64) -> Int64 {
     var arr = [Int64]()
     var k = n
@@ -33,6 +36,10 @@ func solution(_ n:Int64) -> Int64 {
         k += arr[i] * tens
     }
     return k
+}
+ */
+func solution(_ n:Int64) -> Int64 {
+    return Int64( String(n).sorted(by: >).reduce("", { String($0)+String($1) }) )!
 }
 
 let n = Int64(readLine()!)
