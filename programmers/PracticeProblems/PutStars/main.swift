@@ -9,6 +9,7 @@
 // 직사각형 별 찍기
 
 // https://programmers.co.kr/learn/courses/30/lessons/12969
+// https://keeplo.tistory.com/83
 
 import Foundation
 
