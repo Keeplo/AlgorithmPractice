@@ -11,6 +11,7 @@
 
 import Foundation
 
+/*
 func solution(_ n:Int) -> Int {
     var result = 0
         
@@ -23,6 +24,10 @@ func solution(_ n:Int) -> Int {
         }
     }
     return result
+}
+ */
+func solution(_ n:Int) -> Int {
+    return n==0 ? 0 : (1...n).reduce(0, { n%$1==0 ? $0+$1 : $0 })
 }
 
 let n = Int(readLine()!)
