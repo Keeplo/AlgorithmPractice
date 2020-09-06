@@ -12,21 +12,7 @@
 import Foundation
 
 func solution(_ n:Int) -> Int {
-    var num = n
-    var answer:Int = {where: }
-
-    while(num>0) {
-        if(num/10 == 0) {
-            answer += num
-            num = 0
-            break
-        } else {
-            answer += (num%10)
-            num /= 10
-        }
-    }
-    
-    return answer
+    return String(n).reduce(0, {$0 + Int($1.hexDigitValue!)})
 }
 
 let str = Int(readLine()!)
