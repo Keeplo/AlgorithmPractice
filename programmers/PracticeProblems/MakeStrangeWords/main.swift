@@ -10,8 +10,11 @@
 
 //https://programmers.co.kr/learn/courses/30/lessons/12930
 
+//
+
 import Foundation
 
+/*
 func solution(_ s:String) -> String {
     var result = ""
     let arr = s.components(separatedBy: " ")
@@ -31,6 +34,21 @@ func solution(_ s:String) -> String {
     }
     result.removeLast()
     
+    return result
+}
+ */
+
+func solution(_ s:String) -> String {
+    let arr = s.components(separatedBy: " ")
+    var result = ""
+    for s in arr {
+        for i in s.enumerated() {
+            print(Int(i.offset)%2)
+            Int(i.offset)%2 == 1 ? result.append(i.element.lowercased()) : result.append(i.element.uppercased())
+        }
+        result.append(" ")
+    }
+    result.removeLast()
     return result
 }
 
