@@ -10,7 +10,11 @@
 
 // https://programmers.co.kr/learn/courses/30/lessons/12922
 
+// https://keeplo.tistory.com/105?category=930829
+
 import Foundation
+
+/*
 
 func solution(_ n:Int) -> String {
     var result = ""
@@ -36,6 +40,13 @@ func solution(_ n:Int) -> String {
     }
     
     return result
+}
+
+
+*/
+
+func solution(_ n:Int) -> String {
+    return [String](repeatElement("수박", count: n/2)).reduce("", +) + (n%2==1 ? "수" : "")
 }
 
 let n = Int(readLine()!)
