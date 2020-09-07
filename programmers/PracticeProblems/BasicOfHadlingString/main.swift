@@ -10,8 +10,11 @@
 
 // https://programmers.co.kr/learn/courses/30/lessons/12918
 
+// https://keeplo.tistory.com/108
+
 import Foundation
 
+/*
 func solution(_ s:String) -> Bool {
     
     for c in s {
@@ -20,6 +23,10 @@ func solution(_ s:String) -> Bool {
         }
     }
     return true
+}
+ */
+func solution(_ s:String) -> Bool {
+    return s.compactMap({ Int(String($0)) }).count == s.count && (s.count == 4 || s.count == 6)
 }
 
 let str = readLine()!
