@@ -7,7 +7,10 @@
 //
 
 // 문자여을 정수로 바꾸기
+
 // https://programmers.co.kr/learn/courses/30/lessons/12925
+
+// https://keeplo.tistory.com/104
 
 import Foundation
 
