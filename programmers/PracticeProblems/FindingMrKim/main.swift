@@ -10,6 +10,8 @@
 
 // https://programmers.co.kr/learn/courses/30/lessons/12919
 
+// https://keeplo.tistory.com/107
+
 import Foundation
 
 func solution(_ seoul:[String]) -> String {
