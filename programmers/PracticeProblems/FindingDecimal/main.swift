@@ -7,10 +7,14 @@
 //
 
 // 소수 찾기
+
 // https://programmers.co.kr/learn/courses/30/lessons/12921
+
+//
 
 import Foundation
 
+/*
 func solution(_ n:Int) -> Int {
     var check = [Bool](repeating: true, count: n+1)
     var result = 0
@@ -30,6 +34,15 @@ func solution(_ n:Int) -> Int {
     }
     return result
 }
+*/
+/*
+func solution(_ n:Int) -> Int {
+    var check = [Bool](repeatElement(false, count: n))
+    return (2...n).filter({ (i: Int) -> Bool in
+        return check[i] == true ? true : (2..<i).filter({ i%$0==0 }).isEmpty
+        }).count
+}
+ */ 시간초과
 
 let n = Int(readLine()!)
 
