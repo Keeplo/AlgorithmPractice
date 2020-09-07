@@ -10,12 +10,12 @@
 
 // https://programmers.co.kr/learn/courses/30/lessons/12917
 
+// https://keeplo.tistory.com/109
+
 import Foundation
 
 func solution(_ s:String) -> String {
-    var result = ""
-    s.sorted(by: >).map({ result.append($0) })
-    return result
+    return s.sorted(by: >).reduce("", {$0+String($1)})
 }
 
 let str = readLine()!
