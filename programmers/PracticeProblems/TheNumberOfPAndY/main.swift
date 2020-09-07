@@ -10,8 +10,11 @@
 
 // https://programmers.co.kr/learn/courses/30/lessons/12916
 
+// https://keeplo.tistory.com/110?category=930829
+
 import Foundation
 
+/*
 func solution(_ s:String) -> Bool {
     var check = [Int](repeating: 0, count: 2)
     _ = s.filter({ (c: Character) -> Bool in
@@ -30,6 +33,10 @@ func solution(_ s:String) -> Bool {
     } else {
         return false
     }
+}
+*/
+func solution(_ s:String) -> Bool {
+    return s.lowercased().filter({ $0 == "p" }).count == s.lowercased().filter({ $0 == "y" }).count
 }
 
 let str = readLine()!
