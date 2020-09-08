@@ -12,6 +12,7 @@
 
 import Foundation
 
+/*
 func solution(_ strings:[String], _ n:Int) -> [String] {
     let result = strings.sorted(by: { (l: String, f: String ) -> Bool in
         let first = f[f.index(f.startIndex, offsetBy: n)]
@@ -34,6 +35,22 @@ func solution(_ strings:[String], _ n:Int) -> [String] {
     })
     
     return result
+}
+*/
+// sun bed car
+// abce abcd cdx
+func solution(_ strings:[String], _ n:Int) -> [String] {
+    return strings.sorted(by: {
+        print("$0 : \($0[$0.index($0.startIndex, offsetBy: n)])")
+        print("$1 : \($1[$1.index($1.startIndex, offsetBy: n)])")
+        if($0[$0.index($0.startIndex, offsetBy: n)] == $1[$1.index($1.startIndex, offsetBy: n)]) {
+            print("/////$0 : \($0) / $1 : \($1)")
+            return $0 < $1
+        } else {
+            print("다름")
+            return $0[$0.index($0.startIndex, offsetBy: n)] < $1[$1.index($1.startIndex, offsetBy: n)]
+        }
+    })
 }
 
 let arr = readLine()?.components(separatedBy: " ")
