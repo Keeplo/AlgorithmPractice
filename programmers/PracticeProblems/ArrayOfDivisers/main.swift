@@ -10,8 +10,11 @@
 
 // https://programmers.co.kr/learn/courses/30/lessons/12910
 
+//
+
 import Foundation
 
+/*
 func solution(_ arr:[Int], _ divisor:Int) -> [Int] {
     var result = [Int]()
     
@@ -24,6 +27,10 @@ func solution(_ arr:[Int], _ divisor:Int) -> [Int] {
     result.isEmpty ? result.append(-1) : result.sort()
     
     return result
+}
+*/
+func solution(_ arr:[Int], _ divisor:Int) -> [Int] {
+    return arr.filter({ $0%divisor==0 }).isEmpty ? [-1] : 
 }
 
 let arr = readLine()!.components(separatedBy: " ").map({ Int($0)! })
