@@ -6,6 +6,10 @@
 //  Copyright © 2020 Yongwoo Marco Kim. All rights reserved.
 //
 
+// 최댓값과 최솟값
+
+// https://programmers.co.kr/learn/courses/30/lessons/12939
+
 import Foundation
 
 func solution(_ s:String) -> String {
