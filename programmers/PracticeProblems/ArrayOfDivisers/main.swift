@@ -10,7 +10,7 @@
 
 // https://programmers.co.kr/learn/courses/30/lessons/12910
 
-//
+// https://keeplo.tistory.com/114
 
 import Foundation
 
@@ -30,7 +30,7 @@ func solution(_ arr:[Int], _ divisor:Int) -> [Int] {
 }
 */
 func solution(_ arr:[Int], _ divisor:Int) -> [Int] {
-    return arr.filter({ $0%divisor==0 }).isEmpty ? [-1] : 
+    return arr.filter({ $0%divisor==0 }).isEmpty ? [-1] : arr.filter({ $0%divisor==0 }).sorted(by: <)
 }
 
 let arr = readLine()!.components(separatedBy: " ").map({ Int($0)! })
