@@ -10,8 +10,10 @@
 
 // https://programmers.co.kr/learn/courses/30/lessons/12903
 
-import Foundation
+// https://keeplo.tistory.com/115
 
+import Foundation
+/*
 func solution(_ s:String) -> String {
     var result = ""
     if(s.count%2==0) {
@@ -21,6 +23,11 @@ func solution(_ s:String) -> String {
         result.append(s[s.index(s.startIndex, offsetBy: s.count/2)])
     }
     return result
+}
+ */
+
+func solution(_ s:String) -> String {
+    return s.count%2==0 ? String(Array(s)[s.count/2-1])+String(Array(s)[s.count/2]) : String(Array(s)[s.count/2])
 }
 
 let str = readLine()!
