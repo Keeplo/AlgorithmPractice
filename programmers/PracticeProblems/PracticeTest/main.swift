@@ -19,29 +19,14 @@ func solution(_ answers:[Int]) -> [Int] {
     let thirdStudent = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]
     
     answers.enumerated().forEach { (index, element) in
-        if( element == firstStudent[index%5]) {
-            students[1]! += 1
-        }
-        if( element == secondStudent[index%8]) {
-            students[2]! += 1
-        }
-        if( element == thirdStudent[index%10]) {
-            students[3]! += 1
-        }
+        if( element == firstStudent[index%5])  { students[1]! += 1 }
+        if( element == secondStudent[index%8]) { students[2]! += 1 }
+        if( element == thirdStudent[index%10]) { students[3]! += 1 }
     }
         
-    var result = [Int]()
     let max = students.values.max()!
-            
-    for i in 0..<3 {
-        if(students[i+1] == max) {
-            result.append(i+1)
-        }
-    }
-    
-    return result
+    return students.keys.filter({ students[$0] == max }).sorted(by: <)
 }
 
-let arr = readLine()!.components(separatedBy: " ").map( {Int($0)!} )
-
+let arr = [1,3,2,4,2]
 print(solution(arr))
