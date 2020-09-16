@@ -6,6 +6,12 @@
 //  Copyright © 2020 Yongwoo Marco Kim. All rights reserved.
 //
 
+// 체육복
+
+// https://programmers.co.kr/learn/courses/30/lessons/42862
+
+// https://keeplo.tistory.com/120
+
 import Foundation
 
 func solution(_ n:Int, _ lost:[Int], _ reserve:[Int]) -> Int {
@@ -22,7 +28,7 @@ func solution(_ n:Int, _ lost:[Int], _ reserve:[Int]) -> Int {
         }
     })
     
-    // 잃어버린 학생 양옆에 여분있는지 확인
+    // 잃어버린 학생 양옆에 여분있는지 확인 (좌->우 순서로 확인)
     for i in newLost {
         if(r.contains(i-1)) {           // -1 번 학생 여분 있음
             r = r.filter({ $0 != i-1 })
