@@ -10,6 +10,8 @@
  
 // https://programmers.co.kr/learn/courses/30/lessons/42840
 
+// https://keeplo.tistory.com/119
+
 import Foundation
 
 func solution(_ answers:[Int]) -> [Int] {
