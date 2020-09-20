@@ -13,18 +13,6 @@
 //
 
 import Foundation
-/*
-func solution(_ s:String) -> String {
-    let parsedStr = s.components(separatedBy: " ").compactMap({ $0.isEmpty ? nil : $0.lowercased() })
-    //print(parsedStr)
-    
-    let completedStr = parsedStr.map({ $0[$0.startIndex].isLetter ? $0[$0.startIndex].uppercased()+$0[$0.index(after: $0.startIndex)..<$0.index($0.startIndex, offsetBy: $0.count) ].lowercased() : $0
-    })
-    //print(completedStr)
-        
-    return completedStr.joined(separator: " ")
-}
-*/
 
 func solution(_ s:String) -> String {
     return s.components(separatedBy: " ").map({ $0.isEmpty ? $0 :
@@ -34,8 +22,8 @@ func solution(_ s:String) -> String {
     }).joined(separator: " ")
 }
 
-
+let str = "for      the last       week"
 //let str = "3people unFollowed me"
-let str = "3people unFollowed me"
+//let str = "for the last week"
 
 print(solution(str))
