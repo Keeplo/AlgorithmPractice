@@ -6,15 +6,25 @@
 //  Copyright © 2020 Yongwoo Marco Kim. All rights reserved.
 //
 
+// N개의 최소공배수
+
+// https://programmers.co.kr/learn/courses/30/lessons/12953
+
+//
+
 import Foundation
 
+/*
 func solution(_ arr:[Int]) -> Int {
     var muArr = arr.sorted(by: <)
     var divisor = 2
     var GCD = 1
     
-    while(divisor < muArr[muArr.count-1] ) {
+    while(divisor <= muArr[muArr.count-1] ) {
+        print("GCD : \(GCD) / muArr[last] : \(muArr[muArr.count-1]) / divisor : \(divisor)")
+        print("muArr : \(muArr)")
         if(muArr.filter({ $0%divisor==0 }).count == arr.count ) {
+            print("Dividing complete")
             GCD *= divisor
             muArr = muArr.map({ $0/divisor })
             divisor = 2
@@ -22,13 +32,24 @@ func solution(_ arr:[Int]) -> Int {
             divisor += 1
         }
     }
-    
-    print("GCD : \(GCD) / muArr[last] : \(muArr[muArr.count-1]) / divisor : \(divisor)")
-    print("muArr : \(muArr)")
+    print(muArr)
     
     return muArr.reduce(1, {$0*$1}) * GCD
 }
+*/
+func solution(_ arr:[Int]) -> Int {
+    return arr.reduce(1, {LCM($0, $1)})
+}
+
+// 최대공약수
+func GCD(_ min: Int, _ max: Int) -> Int {
+    return min % max == 0 ? max : GCD(max, min % max)
+}
+// 최소공배수
+func LCM(_ a: Int, _ b:Int) -> Int {
+    return a * b / GCD(a,b)
+}
 
 
-let arr = [1, 2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+let arr = [2,6,8,14]
 print(solution(arr))
