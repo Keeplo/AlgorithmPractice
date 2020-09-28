@@ -10,6 +10,9 @@
 
 // https://programmers.co.kr/learn/courses/30/lessons/12941
 
+// https://keeplo.tistory.com/137
+
+
 import Foundation
 
 func solution(_ A:[Int], _ B:[Int]) -> Int {
