@@ -30,7 +30,6 @@ func solution(_ progresses:[Int], _ speeds:[Int]) -> [Int] {
 
     return answer
 }
-
 let progresses = [93, 30, 55]
 let speeds = [1, 30, 5]
 
