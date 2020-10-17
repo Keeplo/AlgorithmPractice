@@ -17,6 +17,8 @@
 		A92AE2DB24EE706000F86E6C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92AE2DA24EE706000F86E6C /* main.swift */; };
 		A92AE2E824EE84AB00F86E6C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92AE2E724EE84AB00F86E6C /* main.swift */; };
 		A92B0FF224EA5249005F1D27 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92B0FF124EA5249005F1D27 /* main.swift */; };
+		A933669D25022AF800E6C4FF /* Better.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933669C25022AF800E6C4FF /* Better.swift */; };
+		A93366A525022BC800E6C4FF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93366A425022BC800E6C4FF /* main.swift */; };
 		A96047FB24FA4E9000220B4D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96047FA24FA4E9000220B4D /* main.swift */; };
 		A960480724FA539600220B4D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A960480624FA539600220B4D /* main.swift */; };
 		A960481224FA596C00220B4D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A960481124FA596C00220B4D /* main.swift */; };
@@ -111,6 +113,15 @@
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 		A92B0FED24EA5249005F1D27 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		A93366A025022BC800E6C4FF /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -361,6 +372,9 @@
 		A92B0FEA24EA5184005F1D27 /* Better.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Better.swift; sourceTree = "<group>"; };
 		A92B0FEF24EA5249005F1D27 /* ChangeStringToInteger */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ChangeStringToInteger; sourceTree = BUILT_PRODUCTS_DIR; };
 		A92B0FF124EA5249005F1D27 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		A933669C25022AF800E6C4FF /* Better.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Better.swift; sourceTree = "<group>"; };
+		A93366A225022BC800E6C4FF /* Collatz */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Collatz; sourceTree = BUILT_PRODUCTS_DIR; };
+		A93366A425022BC800E6C4FF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		A96047E824FA4DD800220B4D /* Better.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Better.swift; sourceTree = "<group>"; };
 		A96047F824FA4E9000220B4D /* SumOfMatrix */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SumOfMatrix; sourceTree = BUILT_PRODUCTS_DIR; };
 		A96047FA24FA4E9000220B4D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -478,6 +492,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A92B0FEC24EA5249005F1D27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A933669F25022BC800E6C4FF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -725,6 +746,14 @@
 			path = ChangeStringToInteger;
 			sourceTree = "<group>";
 		};
+		A93366A325022BC800E6C4FF /* Collatz */ = {
+			isa = PBXGroup;
+			children = (
+				A93366A425022BC800E6C4FF /* main.swift */,
+			);
+			path = Collatz;
+			sourceTree = "<group>";
+		};
 		A96047F924FA4E9000220B4D /* SumOfMatrix */ = {
 			isa = PBXGroup;
 			children = (
@@ -860,6 +889,7 @@
 			isa = PBXGroup;
 			children = (
 				A9BF096924F4DEF10035100A /* main.swift */,
+				A933669C25022AF800E6C4FF /* Better.swift */,
 			);
 			path = GymSuit;
 			sourceTree = "<group>";
@@ -907,6 +937,7 @@
 				A960480524FA539600220B4D /* DeleteMinimumNum */,
 				A960481024FA596C00220B4D /* HarshadNum */,
 				A9C15F4824FAA06200CEB965 /* GcdAndLcm */,
+				A93366A325022BC800E6C4FF /* Collatz */,
 				A9DF57F424E6A1FD000CB1C7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -946,6 +977,7 @@
 				A960480424FA539600220B4D /* DeleteMinimumNum */,
 				A960480F24FA596C00220B4D /* HarshadNum */,
 				A9C15F4724FAA06200CEB965 /* GcdAndLcm */,
+				A93366A225022BC800E6C4FF /* Collatz */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1149,6 +1181,23 @@
 			name = ChangeStringToInteger;
 			productName = ChangeStringToInteger;
 			productReference = A92B0FEF24EA5249005F1D27 /* ChangeStringToInteger */;
+			productType = "com.apple.product-type.tool";
+		};
+		A93366A125022BC800E6C4FF /* Collatz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A93366A625022BC800E6C4FF /* Build configuration list for PBXNativeTarget "Collatz" */;
+			buildPhases = (
+				A933669E25022BC800E6C4FF /* Sources */,
+				A933669F25022BC800E6C4FF /* Frameworks */,
+				A93366A025022BC800E6C4FF /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Collatz;
+			productName = Collatz;
+			productReference = A93366A225022BC800E6C4FF /* Collatz */;
 			productType = "com.apple.product-type.tool";
 		};
 		A96047F724FA4E9000220B4D /* SumOfMatrix */ = {
@@ -1593,6 +1642,9 @@
 					A92B0FEE24EA5249005F1D27 = {
 						CreatedOnToolsVersion = 11.6;
 					};
+					A93366A125022BC800E6C4FF = {
+						CreatedOnToolsVersion = 11.6;
+					};
 					A96047F724FA4E9000220B4D = {
 						CreatedOnToolsVersion = 11.6;
 					};
@@ -1712,6 +1764,7 @@
 				A960480324FA539600220B4D /* DeleteMinimumNum */,
 				A960480E24FA596C00220B4D /* HarshadNum */,
 				A9C15F4624FAA06200CEB965 /* GcdAndLcm */,
+				A93366A125022BC800E6C4FF /* Collatz */,
 			);
 		};
 /* End PBXProject section */
@@ -1779,6 +1832,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A92B0FF224EA5249005F1D27 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A933669E25022BC800E6C4FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A93366A525022BC800E6C4FF /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1909,6 +1970,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9BF096A24F4DEF10035100A /* main.swift in Sources */,
+				A933669D25022AF800E6C4FF /* Better.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2147,6 +2209,28 @@
 			name = Debug;
 		};
 		A92B0FF524EA5249005F1D27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9486RJPBM5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A93366A725022BC800E6C4FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9486RJPBM5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A93366A825022BC800E6C4FF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -2869,6 +2953,15 @@
 			buildConfigurations = (
 				A92B0FF424EA5249005F1D27 /* Debug */,
 				A92B0FF524EA5249005F1D27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A93366A625022BC800E6C4FF /* Build configuration list for PBXNativeTarget "Collatz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A93366A725022BC800E6C4FF /* Debug */,
+				A93366A825022BC800E6C4FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

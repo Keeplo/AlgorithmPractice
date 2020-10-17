@@ -8,6 +8,7 @@
 
 import Foundation
 
+/*
 func solution(_ answers:[Int]) -> [Int] {
     let answer = (
         a: [1, 2, 3, 4, 5], // index % 5
@@ -24,3 +25,4 @@ func solution(_ answers:[Int]) -> [Int] {
 
     return point.sorted{ $0.key < $1.key }.filter{ $0.value == point.values.max() }.map{ $0.key }
 }
+*/

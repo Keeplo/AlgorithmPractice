@@ -20,12 +20,12 @@ func solution(_ str1:String, _ str2:String) -> Int {
         let com = (str1 as NSString).substring(with: NSRange(location:b, length:2))
         arr2.append(com)
     }
-    let array1 = arr1.filter( String($0). )
+    let array1 = arr1.filter( String($0) )
     
     return 0
 }
 
 let str1 = readLine()!.lowercased()
-//let str2 = readLine()!.lowercased()
+let str2 = readLine()!.lowercased()
 
 print(solution(str1, str1))
