@@ -9,27 +9,35 @@
 // 예산
 
 // https://programmers.co.kr/learn/courses/30/lessons/12982
-//
+// https://keeplo.tistory.com/164
 
 import Foundation
 
+//func solution(_ d:[Int], _ budget:Int) -> Int {
+//    var sorted = d.sorted(by: <)
+//    var b = budget
+//
+//    while(b >= sorted[0]) {
+//        b -= sorted[0]
+//        sorted.remove(at: 0)
+//        if sorted.isEmpty {
+//            break
+//        } else {
+//            continue
+//        }
+//    }
+//
+//    return d.count - sorted.count
+//}
+
 func solution(_ d:[Int], _ budget:Int) -> Int {
-    var sorted = d.sorted(by: <)
     var b = budget
-
-    while(b >= sorted[0]) {
-        b -= sorted[0]
-        sorted.remove(at: 0)
-        if sorted.isEmpty {
-            break
-        } else {
-            continue
-        }
-    }
-
-    return d.count - sorted.count
+    
+    return d.sorted().filter({
+        b -= $0
+        return b >= 0
+    }).count
 }
-
 
 //let d = [1,3,2,5,4]
 let d = [2,2,3,3]
