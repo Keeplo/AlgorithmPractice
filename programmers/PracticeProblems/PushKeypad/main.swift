@@ -6,6 +6,11 @@
 //  Copyright © 2021 Yongwoo Marco Kim. All rights reserved.
 //
 
+// 키 패드 누르기
+
+// https://programmers.co.kr/learn/courses/30/lessons/67256
+// https://keeplo.tistory.com/165
+
 import Foundation
 
 func solution(_ numbers:[Int], _ hand:String) -> String {
