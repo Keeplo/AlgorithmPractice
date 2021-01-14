@@ -50,6 +50,7 @@
 		A9F2DB1924F3F04800B03783 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F2DB1824F3F04800B03783 /* main.swift */; };
 		A9F2DB2524F40B5F00B03783 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F2DB2424F40B5F00B03783 /* main.swift */; };
 		A9F2DB2A24F412CD00B03783 /* Better.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F2DB2924F412CD00B03783 /* Better.swift */; };
+		A9FEED7E25ADC5BF0071DDA3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FEED7D25ADC5BF0071DDA3 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -386,6 +387,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		A9FEED7925ADC5BF0071DDA3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -487,6 +497,8 @@
 		A9F2DB2424F40B5F00B03783 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		A9F2DB2924F412CD00B03783 /* Better.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Better.swift; sourceTree = "<group>"; };
 		A9FBA3E524F3BB4400F7805A /* Better.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Better.swift; sourceTree = "<group>"; };
+		A9FEED7B25ADC5BF0071DDA3 /* PushKeypad */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PushKeypad; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9FEED7D25ADC5BF0071DDA3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -743,6 +755,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A9F2DB1F24F40B5F00B03783 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9FEED7825ADC5BF0071DDA3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1050,6 +1069,7 @@
 				A9D123F625A6C73100230684 /* SwitchTernaryScale */,
 				A99E085125A8843A00A54DA4 /* Budget */,
 				A93C810025AC77CF00229647 /* innerProduct */,
+				A9FEED7C25ADC5BF0071DDA3 /* PushKeypad */,
 				A9DF57F424E6A1FD000CB1C7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -1094,6 +1114,7 @@
 				A9D123F525A6C73100230684 /* SwitchTernaryScale */,
 				A99E085025A8843A00A54DA4 /* Budget */,
 				A93C80FF25AC77CF00229647 /* innerProduct */,
+				A9FEED7B25ADC5BF0071DDA3 /* PushKeypad */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1158,6 +1179,14 @@
 				A9F2DB2924F412CD00B03783 /* Better.swift */,
 			);
 			path = year2016;
+			sourceTree = "<group>";
+		};
+		A9FEED7C25ADC5BF0071DDA3 /* PushKeypad */ = {
+			isa = PBXGroup;
+			children = (
+				A9FEED7D25ADC5BF0071DDA3 /* main.swift */,
+			);
+			path = PushKeypad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1792,6 +1821,23 @@
 			productReference = A9F2DB2224F40B5F00B03783 /* year2016 */;
 			productType = "com.apple.product-type.tool";
 		};
+		A9FEED7A25ADC5BF0071DDA3 /* PushKeypad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9FEED8125ADC5BF0071DDA3 /* Build configuration list for PBXNativeTarget "PushKeypad" */;
+			buildPhases = (
+				A9FEED7725ADC5BF0071DDA3 /* Sources */,
+				A9FEED7825ADC5BF0071DDA3 /* Frameworks */,
+				A9FEED7925ADC5BF0071DDA3 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PushKeypad;
+			productName = PushKeypad;
+			productReference = A9FEED7B25ADC5BF0071DDA3 /* PushKeypad */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1913,6 +1959,9 @@
 					A9F2DB2124F40B5F00B03783 = {
 						CreatedOnToolsVersion = 11.6;
 					};
+					A9FEED7A25ADC5BF0071DDA3 = {
+						CreatedOnToolsVersion = 12.3;
+					};
 				};
 			};
 			buildConfigurationList = A9DF57EE24E6A1FD000CB1C7 /* Build configuration list for PBXProject "PracticeProblems" */;
@@ -1965,6 +2014,7 @@
 				A9D123F425A6C73100230684 /* SwitchTernaryScale */,
 				A99E084F25A8843A00A54DA4 /* Budget */,
 				A93C80FE25AC77CF00229647 /* innerProduct */,
+				A9FEED7A25ADC5BF0071DDA3 /* PushKeypad */,
 			);
 		};
 /* End PBXProject section */
@@ -2269,6 +2319,14 @@
 			files = (
 				A9F2DB2524F40B5F00B03783 /* main.swift in Sources */,
 				A9F2DB2A24F412CD00B03783 /* Better.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9FEED7725ADC5BF0071DDA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9FEED7E25ADC5BF0071DDA3 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3214,6 +3272,32 @@
 			};
 			name = Release;
 		};
+		A9FEED7F25ADC5BF0071DDA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9486RJPBM5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A9FEED8025ADC5BF0071DDA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9486RJPBM5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -3555,6 +3639,15 @@
 			buildConfigurations = (
 				A9F2DB2724F40B5F00B03783 /* Debug */,
 				A9F2DB2824F40B5F00B03783 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9FEED8125ADC5BF0071DDA3 /* Build configuration list for PBXNativeTarget "PushKeypad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9FEED7F25ADC5BF0071DDA3 /* Debug */,
+				A9FEED8025ADC5BF0071DDA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
