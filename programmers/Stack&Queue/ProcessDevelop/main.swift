@@ -8,7 +8,7 @@
 
 // 기능개발 (Level 2)
 
-//
+// https://programmers.co.kr/learn/courses/30/lessons/42586
 //
 
 import Foundation
@@ -17,15 +17,38 @@ import Foundation
 //let location = Int(readLine()!)!
 
 func solution(_ progresses:[Int], _ speeds:[Int]) -> [Int] {
-    return []
+    var p = progresses, s = speeds
+    var result = [Int]()
+    
+    while(!p.isEmpty) {
+        for (index, value) in p.enumerated() {
+            p[index] = value + s[index]
+        }
+        var tmp = 0
+        for value in p {
+            if value >= 100 {
+                tmp += 1
+                p.remove(at: 0)
+                s.remove(at: 0)
+            } else {
+                break
+            }
+        }
+        if tmp > 0 {
+            result.append(tmp)
+        }
+    }
+    
+    return result
 }
 
 let priorities = [93, 30, 55]
 let location = [1, 30, 5]
 //  [2,1]
-let priorities = [95, 90, 99, 99, 80, 99]
-let location = [1, 1, 1, 1, 1, 1]
+//let priorities = [95, 90, 99, 99, 80, 99]
+//let location = [1, 1, 1, 1, 1, 1]
 //  [1, 3, 2]
+
 print(solution(priorities, location))
 
 //func solution(_ priorities:[Int], _ location:Int) -> Int {
