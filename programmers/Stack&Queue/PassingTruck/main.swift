@@ -6,10 +6,10 @@
 //  Copyright © 2021 Yongwoo Marco Kim. All rights reserved.
 //
 
-// 다리를 지나는 트럭
+// 다리를 지나는 트럭 (Lv. 2)
  
 // https://programmers.co.kr/learn/courses/30/lessons/42583
-// 
+// https://keeplo.tistory.com/173
 
 import Foundation
 
