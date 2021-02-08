@@ -9,8 +9,7 @@
 // N개의 최소공배수
 
 // https://programmers.co.kr/learn/courses/30/lessons/12953
-
-//
+// https://keeplo.tistory.com/128?category=947131
 
 import Foundation
 
