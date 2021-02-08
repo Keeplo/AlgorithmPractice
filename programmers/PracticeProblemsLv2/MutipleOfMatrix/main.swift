@@ -9,8 +9,7 @@
 // 행렬의 곱셈
 
 // https://programmers.co.kr/learn/courses/30/lessons/12949
-
-//
+// https://keeplo.tistory.com/127?category=947131
 
 import Foundation
 
