@@ -1,0 +1,7 @@
+# IDE Files
+
+*.xcodeproj/
+
+DS_Store
+
+*.xcuserstate
