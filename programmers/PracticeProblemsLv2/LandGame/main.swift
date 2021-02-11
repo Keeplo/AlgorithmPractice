@@ -6,27 +6,24 @@
 //  Copyright © 2021 Yongwoo Marco Kim. All rights reserved.
 //
 
+// 땅따먹기
+
+// https://programmers.co.kr/learn/courses/30/lessons/12913
+//
+
 import Foundation
 
 func solution(_ land:[[Int]]) -> Int{
-    var beforeIndex = -1
+    var varLand = land
     
-    let answer = land.reduce(0){ (before: Int, currentArray: [Int]) -> Int in
-        if beforeIndex == -1 {
-            
-            beforeIndex = currentArray.firstIndex(where: { $0 == currentArray.max()} )!
-            return before + currentArray.max()!
-        } else {
-            let exceptArray: [Int] = currentArray.enumerated().filter({ (index: Int, element: Int) -> Bool in
-                return index != beforeIndex
-            }).map({ $0.element })
-            
-            beforeIndex = exceptArray.firstIndex(where: {$0==exceptArray.max()!})!
-            return before + exceptArray.max()!
-        }
+    for i in 1..<varLand.count {
+        varLand[i][0] += max(varLand[i-1][1], varLand[i-1][2], varLand[i-1][3])
+        varLand[i][1] += max(varLand[i-1][0], varLand[i-1][2], varLand[i-1][3])
+        varLand[i][2] += max(varLand[i-1][0], varLand[i-1][1], varLand[i-1][3])
+        varLand[i][3] += max(varLand[i-1][0], varLand[i-1][1], varLand[i-1][2])
     }
 
-    return answer
+    return varLand.last!.max()!
 }
 
 let land = [[1,2,3,5],[5,6,7,8],[4,3,2,1]]
