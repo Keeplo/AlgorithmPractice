@@ -9,7 +9,7 @@
 // 땅따먹기
 
 // https://programmers.co.kr/learn/courses/30/lessons/12913
-//
+// https://keeplo.tistory.com/179
 
 import Foundation
 
