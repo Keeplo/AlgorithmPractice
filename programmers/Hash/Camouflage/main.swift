@@ -5,6 +5,12 @@
 //  Created by Yongwoo Marco on 2021/02/15.
 //
 
+// 위장 (Hash Lv2)
+
+// https://programmers.co.kr/learn/courses/30/lessons/42578
+// https://keeplo.tistory.com/181
+
+
 import Foundation
 
 func solution(_ clothes:[[String]]) -> Int {
