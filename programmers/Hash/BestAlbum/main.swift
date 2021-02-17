@@ -5,10 +5,10 @@
 //  Created by Yongwoo Marco on 2021/02/17.
 //
 
-// 베스트 앨범
+// 베스트 앨범 (해시, lv 3)
 
 // https://programmers.co.kr/learn/courses/30/lessons/42579
-//
+// https://keeplo.tistory.com/182
 
 import Foundation
 
@@ -37,9 +37,9 @@ func solution(_ genres:[String], _ plays:[Int]) -> [Int] {
         while numbers.count > 0, addCount < 2 {
             let max = numbersPlays.max()!
             let index = numbersPlays.firstIndex(of: max)!
-            
+
             result.append(numbers[index])
-            
+
             numbers.remove(at: index)
             numbersPlays.remove(at: index)
 
