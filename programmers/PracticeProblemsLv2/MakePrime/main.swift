@@ -6,6 +6,11 @@
 //  Copyright © 2021 Yongwoo Marco Kim. All rights reserved.
 //
 
+// 소수 만들기 (Summer/Winter Coding ~2018)
+
+// https://programmers.co.kr/learn/courses/30/lessons/12977
+//
+
 import Foundation
 
 
