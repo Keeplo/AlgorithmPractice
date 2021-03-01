@@ -6,7 +6,7 @@
 //  Copyright © 2021 Yongwoo Marco Kim. All rights reserved.
 //
 
-// 영어 끝말잇기 Lv 2
+// 영어 끝말잇기 (Summer/Winter Coding ~2018) Lv 2
 
 // https://programmers.co.kr/learn/courses/30/lessons/12981
 // https://keeplo.tistory.com/193
