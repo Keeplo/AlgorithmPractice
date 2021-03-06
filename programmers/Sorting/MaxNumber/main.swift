@@ -9,13 +9,17 @@
 import Foundation
 
 func solution(_ numbers:[Int]) -> String {
+    let strNums = numbers.map({ String($0) })
+    var maxNum = ""
     
     
-    return 0
+        
+    return String(maxNum)
 }
 
-let arr = readLine()!.components(separatedBy: " ").map{ Int($0)! }
+//let numbers = [6, 10, 2]            // "6210"
+let numbers = [3, 30, 34, 5, 9]     // "9534330"
 
-let result = solution(arr)
+print(solution(numbers))
 
-print(result)
+
