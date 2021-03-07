@@ -6,6 +6,11 @@
 //  Copyright © 2020 Yongwoo Marco Kim. All rights reserved.
 //
 
+// 가장 큰 수
+ 
+// https://programmers.co.kr/learn/courses/30/lessons/42746
+// https://keeplo.tistory.com/198
+
 import Foundation
 
 func solution(_ numbers:[Int]) -> String {
