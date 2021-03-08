@@ -6,10 +6,10 @@
 //  Copyright © 2021 Yongwoo Marco Kim. All rights reserved.
 //
 
-// H-Index
+// H-Index 
 
 // https://programmers.co.kr/learn/courses/30/lessons/42747
-// 
+// https://keeplo.tistory.com/199
 
 import Foundation
 
