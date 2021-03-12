@@ -12,8 +12,8 @@
 
 ---
 
-## 프로그래머스
-#### 연습문제 Level 1
+# 프로그래머스
+## 연습문제 Level 1
   
   [자릿수 더하기](https://keeplo.tistory.com/100)
   / [약수의 합](https://keeplo.tistory.com/100)
@@ -48,7 +48,7 @@
   / [3진법 뒤집기](https://keeplo.tistory.com/163)
   / [내적](https://keeplo.tistory.com/165)
 
-#### 연습문제 Level 2
+## 연습문제 Level 2
   [최댓값과 최솟값](https://keeplo.tistory.com/138)
   / [최솟값 만들기](https://keeplo.tistory.com/137)
   / [피보나치 수](https://keeplo.tistory.com/136)
@@ -69,31 +69,51 @@
   / [점프와 순간이동](https://keeplo.tistory.com/188)
   / [스킬트리](https://keeplo.tistory.com/189)
   / [방문 길이](https://keeplo.tistory.com/197)
-  / []()
-  / []()
 
-#### Official Test
-##### KAKAO
+## Official Test
+### KAKAO Blind Recruiment
+#### 2018
+  * 1차 ( [다트게임](https://keeplo.tistory.com/156) Lv 1 / [비밀지도](https://keeplo.tistory.com/159) Lv 1  / [실패율](https://keeplo.tistory.com/160) Lv 1 / [프렌즈4블록](https://keeplo.tistory.com/206) Lv 2 / [캐시](https://keeplo.tistory.com/191) Lv 2 )
+  * 2차 (  )
 
-#### [코딩테스트 고득점 Kit](https://programmers.co.kr/learn/challenges)
-##### [해시 Hash](https://programmers.co.kr/learn/courses/30/parts/12077)
-  / []()
-  / []()
+#### 2019
+  * 1차 ( [후보키](https://keeplo.tistory.com/202) Lv 2 )
+#### 2020
+
+#### 2021
+  * 1차 ( [신규 아이디 추천](https://keeplo.tistory.com/187) Lv 1 / [메뉴 리뉴얼](https://keeplo.tistory.com/201) Lv 2 )
+
+### Summer/Winter Coding
+#### 2018
+  [예산](https://keeplo.tistory.com/164) Lv 1
+#### 2019
+
+### KAKAO INTERSHIP
+#### 2019
+  [크레인 인형뽑기 게임](https://keeplo.tistory.com/195) Lv 1
+#### 2020
+  [키 패드 누르기](https://keeplo.tistory.com/166) Lv 1
+  / [수식 최대화](https://keeplo.tistory.com/205) Lv 2
+
+## 코딩테스트 고득점 Kit
+### 해시 Hash
+  [위장](https://keeplo.tistory.com/181) Lv 2
+  / [베스트앨범](https://keeplo.tistory.com/182)
   
-##### [스택과 큐 Stack and Queue](https://programmers.co.kr/learn/courses/30/parts/12081)
-  / [기능개발](https://keeplo.tistory.com/22) Lv 2
-  / []()
-  / []()
+### 스택과 큐 Stack and Queue
+  [기능개발](https://keeplo.tistory.com/22) Lv 2
+  / [프린터](https://keeplo.tistory.com/14) Lv 2
+  / [다리를 지나는 트럭](https://keeplo.tistory.com/173) Lv 2
   
-##### [힙 Heap](https://programmers.co.kr/learn/courses/30/parts/12117)
+### 힙 Heap
 
-##### [정렬 Sort](https://programmers.co.kr/learn/courses/30/parts/12198)
+### 정렬 Sort
   [K번째 수](https://keeplo.tistory.com/121) Lv 1
-  / []()
-  / []()
+  / [가장 큰 수](https://keeplo.tistory.com/198) Lv 2
+  / [H-Index](https://keeplo.tistory.com/199) Lv 2
     
-##### [완전탐색]()
+### 완전탐색
   [모의고사](https://keeplo.tistory.com/119) Lv 1
   
-##### [탐욕법]()
+### 탐욕법
   [체육복](https://keeplo.tistory.com/120) Lv 1
