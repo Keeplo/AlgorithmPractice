@@ -9,8 +9,7 @@
 // 문자열 내 p와 y의 개수
 
 // https://programmers.co.kr/learn/courses/30/lessons/12916
-
-// https://keeplo.tistory.com/110?category=930829
+// https://keeplo.tistory.com/110
 
 import Foundation
 

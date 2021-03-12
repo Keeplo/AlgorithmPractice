@@ -9,7 +9,7 @@
 // 기능개발 (Level 2)
 
 // https://programmers.co.kr/learn/courses/30/lessons/42586
-// https://keeplo.tistory.com/22?category=947131
+// https://keeplo.tistory.com/22
 
 import Foundation
 
