@@ -12,8 +12,9 @@
 
 ---
 
-* 프로그래머스
-  - 연습문제 Level 1
+#### 프로그래머스
+  ###### 연습문제 Level 1
+  
     [자릿수 더하기](https://keeplo.tistory.com/100)
     / [약수의 합](https://keeplo.tistory.com/100)
     / [소수 찾기](https://keeplo.tistory.com/106)
@@ -23,7 +24,7 @@
     / [수박수박수박수박수박수?](https://keeplo.tistory.com/105)
     / [짝수와 홀수](https://keeplo.tistory.com/95)
     / [이상한 문자 만들기](https://keeplo.tistory.com/101)
-    / 서울에서 김서방 찾기](https://keeplo.tistory.com/107)
+    / [서울에서 김서방 찾기](https://keeplo.tistory.com/107)
     / [정수 제곱근 판별](https://keeplo.tistory.com/97)
     / [시저 암호](https://keeplo.tistory.com/103)
     / [문자열 다루기 기본](https://keeplo.tistory.com/108)
