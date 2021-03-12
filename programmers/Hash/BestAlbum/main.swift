@@ -23,7 +23,6 @@ func solution(_ genres:[String], _ plays:[Int]) -> [Int] {
         }
         
         numGenre.updateValue(genres[numbering], forKey: numbering)
-        
         numbering += 1
     }
             
