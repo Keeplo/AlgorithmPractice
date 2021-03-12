@@ -8,6 +8,7 @@
 
 // 약수의 합
 // https://programmers.co.kr/learn/courses/30/lessons/12928
+// https://keeplo.tistory.com/102?category=947131
 
 import Foundation
 

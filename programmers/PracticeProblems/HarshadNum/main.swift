@@ -6,10 +6,9 @@
 //  Copyright © 2020 Yongwoo Marco Kim. All rights reserved.
 //
 
-// 히샤드 수
+// 하샤드 수
 
 // https://programmers.co.kr/learn/courses/30/lessons/12947
-
 // https://keeplo.tistory.com/91
 
 import Foundation

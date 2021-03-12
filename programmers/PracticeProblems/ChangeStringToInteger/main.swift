@@ -6,10 +6,9 @@
 //  Copyright © 2020 Yongwoo Marco Kim. All rights reserved.
 //
 
-// 문자여을 정수로 바꾸기
+// 문자열을 정수로 바꾸기
 
 // https://programmers.co.kr/learn/courses/30/lessons/12925
-
 // https://keeplo.tistory.com/104
 
 import Foundation

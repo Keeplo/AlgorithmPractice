@@ -9,8 +9,7 @@
 // 자연수 뒤집어 배열로 만들기
 
 // https://programmers.co.kr/learn/courses/30/lessons/12932
-
-// https://keeplo.tistory.com/98
+// https://keeplo.tistory.com/99
 
 import Foundation
 

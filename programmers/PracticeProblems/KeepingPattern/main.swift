@@ -9,8 +9,7 @@
 // 수박수박수박수박수박수?
 
 // https://programmers.co.kr/learn/courses/30/lessons/12922
-
-// https://keeplo.tistory.com/105?category=930829
+// https://keeplo.tistory.com/105
 
 import Foundation
 
