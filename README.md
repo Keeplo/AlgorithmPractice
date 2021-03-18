@@ -2,11 +2,11 @@
 
 ## 알고리즘 공부 (블로그 정리)
 
-* 백준알고리즘 문제 -> baekjun/번호.cpp
+* 백준알고리즘 문제 -> baekjun/번호.cpp , 번호.swift
 
-* 프로그래머스 문제 -> programmers/이름.cpp
+* 프로그래머스 문제 -> programmers/이름.cpp , 이름.swift
 
-* 해커랭크 문제 -> hackerrank/이름.cpp , Day.cpp
+* 해커랭크 문제 -> hackerrank/이름.cpp , Day00.cpp , 이름.swift , Day00,swift
 
 -> 블로그의 정리된 내용만 링크 남깁니다.
 
@@ -70,30 +70,6 @@
   / [스킬트리](https://keeplo.tistory.com/189)
   / [방문 길이](https://keeplo.tistory.com/197)
 
-## Official Test
-### KAKAO Blind Recruiment
-#### 2018
-  * 1차 ( [다트게임](https://keeplo.tistory.com/156) Lv 1 / [비밀지도](https://keeplo.tistory.com/159) Lv 1  / [실패율](https://keeplo.tistory.com/160) Lv 1 / [프렌즈4블록](https://keeplo.tistory.com/206) Lv 2 / [캐시](https://keeplo.tistory.com/191) Lv 2 )
-  * 2차 (  )
-
-#### 2019
-  * 1차 ( [후보키](https://keeplo.tistory.com/202) Lv 2 )
-#### 2020
-
-#### 2021
-  * 1차 ( [신규 아이디 추천](https://keeplo.tistory.com/187) Lv 1 / [메뉴 리뉴얼](https://keeplo.tistory.com/201) Lv 2 )
-
-### Summer/Winter Coding
-#### 2018
-  [예산](https://keeplo.tistory.com/164) Lv 1
-#### 2019
-
-### KAKAO INTERSHIP
-#### 2019
-  [크레인 인형뽑기 게임](https://keeplo.tistory.com/195) Lv 1
-#### 2020
-  [키 패드 누르기](https://keeplo.tistory.com/166) Lv 1
-  / [수식 최대화](https://keeplo.tistory.com/205) Lv 2
 
 ## 코딩테스트 고득점 Kit
 ### 해시 Hash
