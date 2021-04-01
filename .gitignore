@@ -1,8 +1,10 @@
 # IDE Files
 
 *.xcodeproj/
+*.xcodeproj
 
-DS_Store
+.DS_Store
 
 *.xcuserstate
+*.xcuserstate/
 *.plist
