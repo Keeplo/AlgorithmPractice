@@ -8,7 +8,7 @@
 // 소수찾기
 
 // https://programmers.co.kr/learn/courses/30/lessons/42839
-// 
+// https://keeplo.tistory.com/214
 
 import Foundation
 
