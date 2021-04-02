@@ -92,6 +92,7 @@
 ### 완전탐색
   [모의고사](https://keeplo.tistory.com/119) Lv 1
   / [소수 찾기](https://keeplo.tistory.com/214) Lv 2 
+  / [카펫](https://keeplo.tistory.com/215) Lv 2
   
 ### 탐욕법
   [체육복](https://keeplo.tistory.com/120) Lv 1
