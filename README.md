@@ -24,6 +24,8 @@
   / [요세푸스문제(1158)](https://www.acmicpc.net/problem/1158)
   / [덱(10866)](https://www.acmicpc.net/problem/10866)
 ### 자료구조 - 201 자료구조 1 (연습문제)
+  [단어뒤집기2(17413)](https://www.acmicpc.net/problem/17413)
+  
 
 ---
 
