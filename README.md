@@ -2,13 +2,28 @@
 
 ## 알고리즘 공부 (블로그 정리)
 
-* 백준알고리즘 문제 -> baekjun/번호.cpp , 번호.swift
+* 백준 알고리즘 문제 -> baekjun/번호.cpp , 번호.swift
 
 * 프로그래머스 문제 -> programmers/이름.cpp , 이름.swift
 
 * 해커랭크 문제 -> hackerrank/이름.cpp , Day00.cpp , 이름.swift , Day00,swift
 
 -> 블로그의 정리된 내용만 링크 남깁니다.
+---
+
+# 백준 온라인 저지
+## 알고리즘 기초
+### 자료구조 - 200 자료구조 1
+  [괄호(9012)](https://www.acmicpc.net/problem/9012)
+  / [스택(10828)](https://www.acmicpc.net/problem/10828)
+  / [단어뒤집기(9093)](https://www.acmicpc.net/problem/9093)
+  / [괄호(9012)](https://www.acmicpc.net/problem/9012)
+  / [스택수열(1874)](https://www.acmicpc.net/problem/1874)
+  / [큐(10845) 시간초과](https://www.acmicpc.net/problem/10845)
+  / [데이터(1406)](https://www.acmicpc.net/problem/1406)
+  / [요세푸스문제(1158)](https://www.acmicpc.net/problem/1158)
+  / [덱(10866)](https://www.acmicpc.net/problem/10866)
+### 자료구조 - 201 자료구조 1 (연습문제)
 
 ---
 
