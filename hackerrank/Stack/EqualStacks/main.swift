@@ -11,30 +11,20 @@
 import Foundation
 
 func equalStacks(h1: [Int], h2: [Int], h3: [Int]) -> Int {
-    var results = Set<Int>(), hs = [[Int]](), height = [[Int]]()
-
-    hs.append( h1.reversed() )
-    hs.append( h2.reversed() )
-    hs.append( h3.reversed() )
+    var s1 = h1, s2 = h2, s3 = h3
+    var height1 = h1.reduce(0, +), height2 = h2.reduce(0, +), height3 = h3.reduce(0, +)
     
-    for h in hs {
-        var arr = [Int]()
-        _ = h.reduce(0){ a, b in
-            results.insert( a+b )
-            arr.append(a+b)
-            
-            return a + b
-        }
-        height.append(arr)
-    }
-    
-    for h in results.sorted(by: >) {
-        if height[0].contains(h), height[1].contains(h), height[2].contains(h) {
-            return h
+    while height1 != height2 || height2 != height3 {
+        if (height1 > height2), (height1 > height3) {
+            height1 -= s1.removeFirst()
+        } else if (height2 > height1), (height2 > height3) {
+            height2 -= s2.removeFirst()
+        } else if (height3 > height1), (height3 > height2) {
+            height3 -= s3.removeFirst()
         }
     }
     
-    return 0
+    return height1
 }
 
 let h1 = [3, 2, 1, 1, 1]
