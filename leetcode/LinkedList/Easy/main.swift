@@ -2,7 +2,7 @@
 //  main.swift
 //  Easy
 //
-//  Created by Yongwoo Marco on 2021/05/11.
+//  Created by Yongwoo Marco since 2021/05/11.
 //
 
 // Definition for singly-linked list.
@@ -64,6 +64,7 @@ func getArray(_ head: ListNode?) -> [Int] {
     return arr
 }
 
+// MARK: --- 21.05.11
 // 1290. Convert Binary Number in a Linked List to Integer
 //func getDecimalValue(_ head: ListNode?) -> Int {
 //    var current = head, arr = [Int]()
@@ -83,30 +84,30 @@ func getArray(_ head: ListNode?) -> [Int] {
 //print(getDecimalValue(getLinkedList([0,0])))  // 0
 
 // 876. Middle of the Linked List
-func getNode(_ head: ListNode?, _ depth: Int) -> ListNode? {
-    var current = head
-    
-    for _ in 0..<depth {
-        if let next = current?.next {
-            current = next
-        } else {
-            return current
-        }
-    }
-    return current
-}
-func getDepth(_ head: ListNode?) -> Int {
-    var depth = 1, current = head
-    
-    while let next = current?.next {
-        current = next
-        depth += 1
-    }
-    
-    return depth/2
-}
-func middleNode(_ head: ListNode?) -> ListNode? {
-    return getNode(head, getDepth(head))
-}
+//func getNode(_ head: ListNode?, _ depth: Int) -> ListNode? {
+//    var current = head
+//
+//    for _ in 0..<depth {
+//        if let next = current?.next {
+//            current = next
+//        } else {
+//            return current
+//        }
+//    }
+//    return current
+//}
+//func getDepth(_ head: ListNode?) -> Int {
+//    var depth = 1, current = head
+//
+//    while let next = current?.next {
+//        current = next
+//        depth += 1
+//    }
+//
+//    return depth/2
+//}
+//func middleNode(_ head: ListNode?) -> ListNode? {
+//    return getNode(head, getDepth(head))
+//}
 //print(middleNode(getLinkedList([1,2,3,4,5]))) //
 //print(middleNode(getLinkedList([1,2,3,4,5,6]))) //

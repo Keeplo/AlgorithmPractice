@@ -5,6 +5,7 @@
 //  Created by Yongwoo Marco since 2021/05/11.
 //
 
+//MARK: --- 21.05.11
 // 1108. Defanging an IP Address
 //func defangIPaddr(_ address: String) -> String {
 //    var defanged = address.split(separator: ".").map({ String($0) + "[.]" }).joined()
@@ -118,14 +119,14 @@
 //print(countMatches([["phone","blue","pixel"],["computer","silver","phone"],["phone","gold","iphone"]], "type", "phone"))
 
 // 1486. XOR Operation in an Array
-func xorOperation(_ n: Int, _ start: Int) -> Int {
-    var arr = [Int](repeating: start, count: n)
-    for i in 0..<n {
-        arr[i] += i*2
-    }
-    return arr.reduce(0, ^)
-}
-print(xorOperation(5, 0)) // 8
-print(xorOperation(4, 3)) // 8
-print(xorOperation(1, 7)) // 7
-print(xorOperation(10, 5)) // 2
+//func xorOperation(_ n: Int, _ start: Int) -> Int {
+//    var arr = [Int](repeating: start, count: n)
+//    for i in 0..<n {
+//        arr[i] += i*2
+//    }
+//    return arr.reduce(0, ^)
+//}
+//print(xorOperation(5, 0)) // 8
+//print(xorOperation(4, 3)) // 8
+//print(xorOperation(1, 7)) // 7
+//print(xorOperation(10, 5)) // 2

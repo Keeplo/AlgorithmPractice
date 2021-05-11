@@ -2,10 +2,10 @@
 //  main.swift
 //  Easy
 //
-//  Created by Yongwoo Marco since 2021/05/11.
+//  Created by Yongwoo Marco since 2021/05/01.
 //
 
-// MARK: --- 20.05.11
+// MARK: --- 20.05.02
 // 1021. Remove Outermost Parentheses
 //func removeOuterParentheses(_ S: String) -> String {
 //    var stack = [Character](), strs = [String](), temp = ""
