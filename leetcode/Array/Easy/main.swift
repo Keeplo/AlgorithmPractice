@@ -130,3 +130,49 @@
 //print(xorOperation(4, 3)) // 8
 //print(xorOperation(1, 7)) // 7
 //print(xorOperation(10, 5)) // 2
+
+// 1656. Design an Ordered Stream
+//class OrderedStream {
+//    var arr = [String](), ptr = 1
+//
+//    init(_ n: Int) {
+//        arr = [String](repeating: "", count: n + 1)
+//
+//        print("init \(arr)")
+//    }
+//
+//    func insert(_ idKey: Int, _ value: String) -> [String] {
+//        arr[idKey] = value
+//        print("insert \(idKey), arr \(arr)")
+//
+//
+//    }
+//}
+//let obj = OrderedStream(5)
+//let ret_1: [String] = obj.insert(3, "ccccc")
+//print("ret_1 \(ret_1)")6
+//let ret_2: [String] = obj.insert(1, "aaaaa")
+//print("ret_2 \(ret_2)")
+//let ret_3: [String] = obj.insert(2, "bbbbb")
+//print("ret_3 \(ret_3)")
+//let ret_4: [String] = obj.insert(5, "eeeee")
+//print("ret_4 \(ret_4)")
+//let ret_5: [String] = obj.insert(4, "ddddd")
+//print("ret_5 \(ret_5)")
+
+// 1588. Sum of All Odd Length Subarrays
+func sumOddLengthSubarrays(_ arr: [Int]) -> Int {
+    var result = [Int]()
+
+    for i in 0..<arr.count {
+        if (i+1)%2 == 1 {
+            for j in
+        }
+    }
+        
+    return result.reduce(0, +)
+}
+
+print(sumOddLengthSubarrays([1, 2]))            // 3
+//print(sumOddLengthSubarrays([10, 11, 12]))      // 6
+print(sumOddLengthSubarrays([1, 4, 2, 5, 3]))   // 58
