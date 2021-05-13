@@ -131,26 +131,53 @@
 //print(xorOperation(1, 7)) // 7
 //print(xorOperation(10, 5)) // 2
 
+// 1854. Maximum Population Year
+//func maximumPopulation(_ logs: [[Int]]) -> Int {
+//    var mark = [Int](repeating: 0, count: 100)
+//
+//    _ = logs.map({ p in
+//        for i in (p[0] - 1950)...(p[1] - 1950 - 1) {
+//            mark[i] += 1
+//        }
+//    })
+//
+//    return 1950 + Int(mark.firstIndex(of: mark.max()!)!)
+//}
+//print(maximumPopulation([[1993,1999],[2000,2010]]))  // 1993
+//print(maximumPopulation([[1950,1961],[1960,1971],[1970,1981]]))  // 1960
+
 // 1656. Design an Ordered Stream
 //class OrderedStream {
-//    var arr = [String](), ptr = 1
+//    var arr = [String](), ptr = 0
 //
 //    init(_ n: Int) {
-//        arr = [String](repeating: "", count: n + 1)
-//
-//        print("init \(arr)")
+//        arr = [String](repeating: "", count: n)
 //    }
 //
 //    func insert(_ idKey: Int, _ value: String) -> [String] {
-//        arr[idKey] = value
-//        print("insert \(idKey), arr \(arr)")
+//        arr[idKey-1] = value
 //
+//        if arr[ptr] == "" {
+//            return []
+//        } else if ptr < arr.count - 1 {
+//            let start = ptr
+//            for i in ptr..<arr.count {
+//                if arr[i] == "" {
+//                    ptr = i
+//                    return  arr[start..<i].map({ String($0) })
+//                }
+//            }
 //
+//            return arr[start..<arr.count].map({ String($0) })
+//        } else {
+//            return [arr[ptr]]
+//        }
 //    }
 //}
+//
 //let obj = OrderedStream(5)
 //let ret_1: [String] = obj.insert(3, "ccccc")
-//print("ret_1 \(ret_1)")6
+//print("ret_1 \(ret_1)")
 //let ret_2: [String] = obj.insert(1, "aaaaa")
 //print("ret_2 \(ret_2)")
 //let ret_3: [String] = obj.insert(2, "bbbbb")
@@ -162,17 +189,19 @@
 
 // 1588. Sum of All Odd Length Subarrays
 func sumOddLengthSubarrays(_ arr: [Int]) -> Int {
-    var result = [Int]()
-
-    for i in 0..<arr.count {
-        if (i+1)%2 == 1 {
-            for j in
+    var result = 0
+    
+    for c in 1...arr.count {
+        if c%2 == 1 {
+            for i in 0..<c {
+                
+            }
         }
     }
-        
-    return result.reduce(0, +)
+    
+    return 0
 }
 
 print(sumOddLengthSubarrays([1, 2]))            // 3
-//print(sumOddLengthSubarrays([10, 11, 12]))      // 6
+print(sumOddLengthSubarrays([10, 11, 12]))      // 6
 print(sumOddLengthSubarrays([1, 4, 2, 5, 3]))   // 58
