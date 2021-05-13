@@ -188,20 +188,133 @@
 //print("ret_5 \(ret_5)")
 
 // 1588. Sum of All Odd Length Subarrays
-func sumOddLengthSubarrays(_ arr: [Int]) -> Int {
-    var result = 0
-    
-    for c in 1...arr.count {
-        if c%2 == 1 {
-            for i in 0..<c {
-                
-            }
-        }
-    }
-    
-    return 0
-}
+//func sumOddLengthSubarrays(_ arr: [Int]) -> Int {
+//    var result = 0
+//
+//    for c in 1...arr.count {
+//        if c%2 == 1 {
+//            for i in 0..<arr.count {
+//                if i + c <= arr.count {
+//                    for j in i..<i+c {
+//                        result += arr[j]
+//                    }
+//                }
+//            }
+//        }
+//    }
+//
+//    return result
+//}
+//print(sumOddLengthSubarrays([1, 2]))            // 3
+//print(sumOddLengthSubarrays([10, 11, 12]))      // 6
+//print(sumOddLengthSubarrays([1, 4, 2, 5, 3]))   // 58
 
-print(sumOddLengthSubarrays([1, 2]))            // 3
-print(sumOddLengthSubarrays([10, 11, 12]))      // 6
-print(sumOddLengthSubarrays([1, 4, 2, 5, 3]))   // 58
+// 1534. Count Good Triplets
+//func countGoodTriplets(_ arr: [Int], _ a: Int, _ b: Int, _ c: Int) -> Int {
+//    var result = [[Int]]()
+//
+//    func combination(total: [Int], shouldSelect: Int, current index: Int, s: [Int]) {
+//        if shouldSelect == 0 {
+//            if abs(s[0]-s[1]) <= a, abs(s[1]-s[2]) <= b, abs(s[0]-s[2]) <= c {
+//                result.append(s)
+//            }
+//        } else if index == total.count {
+//            return
+//        } else {
+//            var news = s
+//            news.append(total[index])
+//            combination(total: total, shouldSelect: shouldSelect-1, current: index+1, s: news)
+//            combination(total: total, shouldSelect: shouldSelect, current: index+1, s: s)
+//        }
+//    }
+//
+//    combination(total: arr, shouldSelect: 3, current: 0, s: [])
+//
+//    return result.count
+//}
+//print(countGoodTriplets([3,0,1,1,9,7], 7, 2, 3))    // 4
+//print(countGoodTriplets([1,1,2,2,3], 0, 0, 1))      // 0
+
+// 1732. Find the Highest Altitude
+//func largestAltitude(_ gain: [Int]) -> Int {
+//    var current = 0
+//
+//    var result = gain.map({ gain -> Int in
+//        current += gain
+//
+//        return current
+//    })
+//
+//    result.insert(0, at: 0)
+//
+//    return result.max()!
+//}
+//print(largestAltitude([-5,1,5,0,-7]))       // 1
+//print(largestAltitude([-4,-3,-2,-1,4,3,2])) // 0
+
+// 1266. Minimum Time Visiting All Points
+//func minTimeToVisitAllPoints(_ points: [[Int]]) -> Int {
+//    var seconds = 0
+//
+//    for i in 0..<points.count-1 {
+//        seconds += [abs(points[i+1][0]-points[i][0]), abs(points[i+1][1]-points[i][1])].max()!
+//    }
+//
+//    return seconds
+//}
+//print(minTimeToVisitAllPoints([[1,1],[3,4],[-1,0]]))    // 7
+//print(minTimeToVisitAllPoints([[3,2],[-2,2]]))          // 5
+
+// 1252. Cells with Odd Values in a Matrix
+//func oddCells(_ m: Int, _ n: Int, _ indices: [[Int]]) -> Int {
+//    var matrix = [[Int]](repeating: [Int](repeating: 0, count: n), count: m)
+//
+//    for i in indices {  // [x, y]
+//        matrix[i[0]] = matrix[i[0]].map({ $0 + 1 })
+//
+//        for j in 0..<matrix.count {
+//            matrix[j][i[1]] += 1
+//        }
+//    }
+//
+//    return matrix.reduce(0){ $0 + $1.filter{ $0%2 == 1 }.count }
+//}
+//print(oddCells(2, 3, [[0,1],[1,1]]))    //  6
+//print(oddCells(2, 2, [[1,1],[0,0]]))    //  0
+
+// 1295. Find Numbers with Even Number of Digits
+//func findNumbers(_ nums: [Int]) -> Int {
+//    return nums.filter({ String($0).count % 2 == 0 }).count
+//}
+//print(findNumbers([12,345,2,6,7896]))   //  2
+//print(findNumbers([555,901,482,1771]))  //  1
+
+// 1827. Minimum Operations to Make the Array Increasing
+//func minOperations(_ nums: [Int]) -> Int {
+//    var n = nums, ans = 0
+//
+//    for i in 0..<n.count-1 {
+//        if n[i] >= n[i+1] {
+//            ans += n[i] + 1 - n[i+1]
+//            n[i+1] = n[i] + 1
+//        }
+//    }
+//
+//    return ans
+//}
+//print(minOperations([1,1,1]))       // 3
+//print(minOperations([1,5,2,4,1]))   // 14
+//print(minOperations([8]))           // 0
+
+// 832. Flipping an Image
+//func flipAndInvertImage(_ image: [[Int]]) -> [[Int]] {
+////    let reversed = image.map({ $0.reversed() })
+////    let invert = reversed.map({ $0.map({ $0 == 1 ? 0 : 1 }) })
+////
+////    return invert
+//     return image.map({ $0.reversed() }).map({ $0.map({ $0 == 1 ? 0 : 1 }) })
+//}
+//print(flipAndInvertImage([[1,1,0],[1,0,1],[0,0,0]]))    // [[1,0,0],[0,1,0],[1,1,1]]
+//print(flipAndInvertImage([[1,1,0,0],[1,0,0,1],[0,1,1,1],[1,0,1,0]]))    // [[1,1,0,0],[0,1,1,0],[0,0,0,1],[1,0,1,0]]
+
+//
