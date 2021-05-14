@@ -98,6 +98,7 @@
 //print(decompressRLElist([1,2,3,4])) // [2,4,4,4]
 //print(decompressRLElist([1,1,2,3])) // [1,3,3]
 
+// MARK: --- 21.05.12
 // 1389. Create Target Array in the Given Order
 //func createTargetArray(_ nums: [Int], _ index: [Int]) -> [Int] {
 //    var result = [Int]()
@@ -110,6 +111,7 @@
 //print(createTargetArray([1,2,3,4,0], [0,1,2,3,0]))  // [0,1,2,3,4]
 //print(createTargetArray([1], [0]))                  // [1]
 
+// MARK: --- 21.05.13
 // 1773. Count Items Matching a Rule
 //func countMatches(_ items: [[String]], _ ruleKey: String, _ ruleValue: String) -> Int {
 //    let ruleKeys = ["type":0, "color":1, "name":2]
@@ -289,6 +291,7 @@
 //print(findNumbers([12,345,2,6,7896]))   //  2
 //print(findNumbers([555,901,482,1771]))  //  1
 
+// MARK: --- 21.05.14
 // 1827. Minimum Operations to Make the Array Increasing
 //func minOperations(_ nums: [Int]) -> Int {
 //    var n = nums, ans = 0
@@ -317,4 +320,138 @@
 //print(flipAndInvertImage([[1,1,0],[1,0,1],[0,0,0]]))    // [[1,0,0],[0,1,0],[1,1,1]]
 //print(flipAndInvertImage([[1,1,0,0],[1,0,0,1],[0,1,1,1],[1,0,1,0]]))    // [[1,1,0,0],[0,1,1,0],[0,0,0,1],[1,0,1,0]]
 
+// 1572. Matrix Diagonal Sum
+//func diagonalSum(_ mat: [[Int]]) -> Int {
+//    var result = 0
 //
+//    for i in 0..<mat.count {
+//        result += mat[i][i]
+//        if mat.count % 2 == 1, i == mat.count/2 {
+//        } else {
+//            result += mat[i][mat.count-1-i]
+//        }
+//    }
+//
+//    return result
+//}
+//print(diagonalSum([[1,2,3],
+//                   [4,5,6],
+//                   [7,8,9]]))   //  25
+//print(diagonalSum([[1,1,1,1],
+//                   [1,1,1,1],
+//                   [1,1,1,1],
+//                   [1,1,1,1]])) //  8
+//print(diagonalSum([[5]]))       //  5
+
+// 1464. Maximum Product of Two Elements in an Array
+//func maxProduct(_ nums: [Int]) -> Int {
+//    var n = nums
+//    let first = n.remove(at: n.firstIndex(of: n.max()!)!)
+//    let second = n.max()!
+//    return (first - 1) * (second - 1)
+//}
+//print(maxProduct([3,4,5,2]))    // 12
+//print(maxProduct([1,5,4,5]))    // 16
+//print(maxProduct([3,7]))        // 12
+
+// 1450. Number of Students Doing Homework at a Given Time
+//func busyStudent(_ startTime: [Int], _ endTime: [Int], _ queryTime: Int) -> Int {
+//    return (0..<startTime.count).filter({ startTime[$0]...endTime[$0] ~= queryTime || (startTime[$0]==queryTime && endTime[$0]==queryTime) }).count
+//}
+//print(busyStudent([1,2,3], [3,2,7], 4)) // 1
+//print(busyStudent([4], [4], 4))         // 1
+//print(busyStudent([4], [4], 5))         // 0
+//print(busyStudent([1,1,1,1], [1,3,2,4], 7)) // 0
+//print(busyStudent([9,8,7,6,5,4,3,2,1], [10,10,10,10,10,10,10,10,10], 5)) // 5
+
+// 1304. Find N Unique Integers Sum up to Zero
+//func sumZero(_ n: Int) -> [Int] {
+//    var result = [Int]()
+//
+//    for i in 0..<n/2 {
+//        result.append(i+1)
+//        result.append(-(i+1))
+//    }
+//    if n%2 == 1 {
+//        result.append(0)
+//    }
+//
+//    return result.sorted(by: <)
+//}
+//print(sumZero(5))   // [-7,-1,1,3,4]
+//print(sumZero(3))   // [-1,0,1]
+//print(sumZero(1))   // [0]
+
+// 1351. Count Negative Numbers in a Sorted Matrix
+//func countNegatives(_ grid: [[Int]]) -> Int {
+//    return grid.reduce(0){ $0 + $1.filter({ $0 < 0 }).count }
+//}
+//print(countNegatives([[4,3,2,-1],[3,2,1,-1],[1,1,-1,-2],[-1,-1,-2,-3]]))    // 8
+//print(countNegatives([[3,2],[1,0]]))    // 0
+//print(countNegatives([[1,-1],[-1,-1]])) // 3
+//print(countNegatives([[-1]]))           // 1
+
+// 905. Sort Array By Parity
+//func sortArrayByParity(_ nums: [Int]) -> [Int] {
+//    return nums.sorted(by: { $0%2==0 && $1%2==1 })
+//}
+//print(sortArrayByParity([3, 1, 2, 4]))  // [2, 4, 3, 1]
+
+// 1475. Final Prices With a Special Discount in a Shop
+//func finalPrices(_ prices: [Int]) -> [Int] {
+//    var result = prices
+//    for i in 0..<result.count-1 {
+//        if result[i] > result[i+1] {
+//            result[i] -= result[i+1]
+//        } else {
+//            for j in i+1..<result.count {
+//                if result[i] >= result[j] {
+//                    result[i] -= result[j]
+//                    break
+//                }
+//            }
+//        }
+//    }
+//
+//    return result
+//}
+//print(finalPrices([8,4,6,2,3])) // [4,2,4,2,3]
+//print(finalPrices([1,2,3,4,5])) // [1,2,3,4,5]
+//print(finalPrices([10,1,1,6]))  // [9,0,1,6]
+
+// 1748. Sum of Unique Elements
+//func sumOfUnique(_ nums: [Int]) -> Int {
+//    var dic = [Int:Int]()
+//
+//    for i in nums {
+//        if dic.keys.contains(i) {
+//            dic[i]! += 1
+//        } else {
+//            dic.updateValue(1, forKey: i)
+//        }
+//    }
+//
+//    return dic.reduce(0){ $0 + ($1.value == 1 ? $1.key : 0) }
+//}
+//print(sumOfUnique([1,2,3,2]))    // 4
+//print(sumOfUnique([1,1,1,1,1]))    // 0
+//print(sumOfUnique([1,2,3,4,5]))    // 15
+
+// 1299. Replace Elements with Greatest Element on Right Side
+//func replaceElements(_ arr: [Int]) -> [Int] {
+//    var result = [Int](), lastMax = 0
+//
+//    for i in 0..<arr.count-1 {
+//        if arr[i] >= lastMax {
+//            lastMax = arr[i+1..<arr.count].max()!
+//        }
+//        result.append(lastMax)
+//    }
+//    result.append(-1)
+//
+//    return result
+//}
+//print(replaceElements([17,18,5,4,6,1])) // [18,6,6,6,1,-1]
+//print(replaceElements([400]))           // [-1]
+
+// MARK: --- 21.05.1
