@@ -454,4 +454,177 @@
 //print(replaceElements([17,18,5,4,6,1])) // [18,6,6,6,1,-1]
 //print(replaceElements([400]))           // [-1]
 
-// MARK: --- 21.05.1
+// MARK: --- 21.05.15
+// 561. Array Partition I
+//func arrayPairSum(_ nums: [Int]) -> Int {
+//    var sorted = nums.sorted(by: <), result = 0
+//    for i in 0..<nums.count {
+//        if i%2==0 {
+//            result += sorted[i]
+//        }
+//    }
+//    return result
+//}
+//print(arrayPairSum([1,4,3,2]))      // 4
+//print(arrayPairSum([6,2,6,5,1,2]))  // 9
+
+// 1742. Maximum Number of Balls in a Box
+//func countBalls(_ lowLimit: Int, _ highLimit: Int) -> Int {
+//    var ballCount = [Int](repeating: 0, count: highLimit+1)
+//
+//    for i in lowLimit...highLimit {
+//        if String(i).count > 1 {
+//            let sum = String(i).reduce(0){ $0 + Int(String($1))! }
+//            ballCount[sum] += 1
+//        } else {
+//            ballCount[i] += 1
+//        }
+//    }
+//    return ballCount.max()!
+//}
+//print(countBalls(1, 10))    // 2
+//print(countBalls(5, 15))    // 2
+//print(countBalls(19, 28))   // 2
+
+// 1051. Height Checker
+//func heightChecker(_ heights: [Int]) -> Int {
+//    let sorted = heights.sorted(by: <)
+//    return (0..<heights.count).filter({ heights[$0] != sorted[$0] }).count
+//}
+//print(heightChecker([1,1,4,2,1,3])) // 3
+//print(heightChecker([5,1,2,3,4]))   // 5
+//print(heightChecker([1,2,3,4,5]))   // 0
+
+// 1460. Make Two Arrays Equal by Reversing Sub-arrays
+//func canBeEqual(_ target: [Int], _ arr: [Int]) -> Bool {
+//    var t = target, a = arr
+//
+//    while !a.isEmpty {
+//        if let first = t.first {
+//            if let index = a.firstIndex(of: first) {
+//                let reverse = a[a.startIndex...index].reversed()
+//                let left = a[a.index(after: index)..<a.endIndex]
+//                a.removeAll()
+//                a = reverse.map({ Int($0) })
+//                if left.count > 0 {
+//                    _ = left.map({ a.append(Int($0)) })
+//                }
+//
+//                t.removeFirst()
+//                a.removeFirst()
+//            } else {
+//                break
+//            }
+//        }
+//    }
+//
+//    return a.isEmpty
+//}
+//print(canBeEqual([1,2,3,4], [2,4,1,3]))     // true
+//print(canBeEqual([7], [7]))                 // true
+//print(canBeEqual([1,12], [12,1]))           // true
+//print(canBeEqual([3,7,9], [3,7,11]))        // false
+//print(canBeEqual([1,1,1,1,1], [1,1,1,1,1])) // true
+
+// 1337. The K Weakest Rows in a Matrix
+//func kWeakestRows(_ mat: [[Int]], _ k: Int) -> [Int] {
+//    var force = [Int](repeating: 0, count: mat.count)
+//    for (i, v) in mat.enumerated() {
+//        let soldiers = v.filter({ $0 == 1 }).count
+//        force[i] = soldiers
+//    }
+//
+//    var indexes = [Int]()
+//
+//    for _ in 0..<k {
+//        if let firstMin = force.min() {
+//            indexes.append(force.firstIndex(of: firstMin)!)
+//            force[force.firstIndex(of: firstMin)!] = 101
+//        }
+//    }
+//
+//    return indexes
+//}
+//print(kWeakestRows([[1,1,0,0,0],
+//                    [1,1,1,1,0],
+//                    [1,0,0,0,0],
+//                    [1,1,0,0,0],
+//                    [1,1,1,1,1]], 3))   // [2,0,3]
+//print(kWeakestRows([[1,0,0,0],
+//                    [1,1,1,1],
+//                    [1,0,0,0],
+//                    [1,0,0,0]], 2))     // [0,2]
+
+// 977. Squares of a Sorted Array
+//func sortedSquares(_ nums: [Int]) -> [Int] {
+//    return nums.map({ $0*$0 }).sorted(by: <)
+//}
+//print(sortedSquares([-4,-1,0,3,10]))    // [0,1,9,16,100]
+//print(sortedSquares([-7,-3,2,3,11]))    // [4,9,9,49,121]
+
+// 1502. Can Make Arithmetic Progression From Sequence
+//func canMakeArithmeticProgression(_ arr: [Int]) -> Bool {
+//    var a = arr.sorted(by: <)
+//    let difference = a[0] - a[1]
+//    
+//    for i in 0..<a.count-1 {
+//        if a[i] - a[i+1] != difference {
+//            return false
+//        }
+//    }
+//    
+//    return true
+//}
+//print(canMakeArithmeticProgression([3,5,1]))    // true
+//print(canMakeArithmeticProgression([1,2,4]))    // false
+
+// 1217. Minimum Cost to Move Chips to The Same Position
+//func minCostToMoveChips(_ position: [Int]) -> Int {
+//    var dic = [Int:Int]()
+//
+//    for i in position {
+//        if let _ = dic[i] {
+//            dic[i]! += 1
+//        } else {
+//            dic.updateValue(1, forKey: i)
+//        }
+//    }
+//
+//    var results = [Int]()
+//
+//    for i in dic.keys {
+//        var d = dic
+//        d.removeValue(forKey: i)
+//        results.append( d.map({ abs($0.key - i)%2 == 1 ? $0.value : 0 }).reduce(0,+) )
+//    }
+//
+//    return results.min()!
+//}
+//print(minCostToMoveChips([1,2,3]))          // 1
+//print(minCostToMoveChips([2,2,2,3,3]))      // 2
+//print(minCostToMoveChips([1,1000000000]))   // 1
+
+// 922. Sort Array By Parity II
+//func sortArrayByParityII(_ nums: [Int]) -> [Int] {
+//    var q = nums, result = [Int]()
+//    while !q.isEmpty {
+//        if result.count % 2 == 0 {
+//            if let first = q.first, first % 2 == 0 {
+//                result.append(q.removeFirst())
+//            } else {
+//                q.append(q.removeFirst())
+//            }
+//        } else {
+//            if let first = q.first, first % 2 == 1 {
+//                result.append(q.removeFirst())
+//            } else {
+//                q.append(q.removeFirst())
+//            }
+//        }
+//    }
+//    return result
+//}
+//print(sortArrayByParityII([4,2,5,7]))   // [4,5,2,7]
+//print(sortArrayByParityII([2,3]))       // [2,3]
+
+//
