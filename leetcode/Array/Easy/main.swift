@@ -627,4 +627,22 @@
 //print(sortArrayByParityII([4,2,5,7]))   // [4,5,2,7]
 //print(sortArrayByParityII([2,3]))       // [2,3]
 
-//
+// MARK: --- 21.05.16
+// 1380. Lucky Numbers in a Matrix
+func luckyNumbers (_ matrix: [[Int]]) -> [Int] {
+    let rowMin = matrix.map({ $0.min()! })
+    let colMax = (0..<matrix.first!.count).map({ i -> Int in
+        var max = [Int]()
+        for j in 0..<matrix.count {
+            max.append(matrix[j][i])
+        }
+        return max.max()!
+    })
+    
+    let luckyNum = rowMin.filter({ colMax.contains($0) })
+    
+    return luckyNum
+}
+print(luckyNumbers([[3,7,8],[9,11,13],[15,16,17]]))         // [15]
+print(luckyNumbers([[1,10,4,2],[9,3,8,7],[15,16,17,12]]))   // [12]
+print(luckyNumbers([[7,8],[1,2]]))                          // [7]
