@@ -629,20 +629,186 @@
 
 // MARK: --- 21.05.16
 // 1380. Lucky Numbers in a Matrix
-func luckyNumbers (_ matrix: [[Int]]) -> [Int] {
-    let rowMin = matrix.map({ $0.min()! })
-    let colMax = (0..<matrix.first!.count).map({ i -> Int in
-        var max = [Int]()
-        for j in 0..<matrix.count {
-            max.append(matrix[j][i])
-        }
-        return max.max()!
-    })
-    
-    let luckyNum = rowMin.filter({ colMax.contains($0) })
-    
-    return luckyNum
-}
-print(luckyNumbers([[3,7,8],[9,11,13],[15,16,17]]))         // [15]
-print(luckyNumbers([[1,10,4,2],[9,3,8,7],[15,16,17,12]]))   // [12]
-print(luckyNumbers([[7,8],[1,2]]))                          // [7]
+//func luckyNumbers (_ matrix: [[Int]]) -> [Int] {
+//    let rowMin = matrix.map({ $0.min()! })
+//    let colMax = (0..<matrix.first!.count).map({ i -> Int in
+//        var max = [Int]()
+//        for j in 0..<matrix.count {
+//            max.append(matrix[j][i])
+//        }
+//        return max.max()!
+//    })
+//
+//    let luckyNum = rowMin.filter({ colMax.contains($0) })
+//
+//    return luckyNum
+//}
+//print(luckyNumbers([[3,7,8],[9,11,13],[15,16,17]]))         // [15]
+//print(luckyNumbers([[1,10,4,2],[9,3,8,7],[15,16,17,12]]))   // [12]
+//print(luckyNumbers([[7,8],[1,2]]))                          // [7]
+
+// 1002. Find Common Characters
+//func commonChars(_ words: [String]) -> [String] {
+//    var chars = words.map({ $0.map({ Character(extendedGraphemeClusterLiteral: $0) }) })
+//    var result = [String]()
+//
+//    for c in chars[0] {
+//        if chars.filter({ $0.contains(c) }).count == chars.count {
+//            for i in 0..<chars.count {
+//                chars[i].remove(at: chars[i].firstIndex(of: c)!)
+//            }
+//            result.append(String(c))
+//        }
+//    }
+//
+//    return result
+//}
+//print(commonChars(["bella","label","roller"]))  // ["e","l","l"]
+//print(commonChars(["cool","lock","cook"]))      // ["c","o"]
+
+// 1491. Average Salary Excluding the Minimum and Maximum Salary
+//func average(_ salary: [Int]) -> Double {
+//    var removed = salary
+//
+//    removed.remove(at: removed.firstIndex(of: salary.max()!)!)
+//    removed.remove(at: removed.firstIndex(of: salary.min()!)!)
+//
+//    let result = Double(removed.reduce(0, +))/Double(removed.count)
+//
+//    return result
+//}
+//print(average([4000,3000,1000,2000]))           // 2500.00000
+//print(average([1000,2000,3000]))                // 2000.00000
+//print(average([6000,5000,4000,3000,2000,1000])) // 3500.00000
+//print(average([8000,9000,2000,3000,6000,1000])) // 4750.00000
+
+// MARK: --- 21.05.17
+// 1122. Relative Sort Array
+//func relativeSortArray(_ arr1: [Int], _ arr2: [Int]) -> [Int] {
+//    var remover = arr1.sorted(by: <), result = [Int]()
+//
+//    for i in 0..<arr2.count {
+//        result.append(arr2[i])
+//
+//        if let index = remover.firstIndex(of: arr2[i]) {
+//            remover.remove(at: index)
+//        }
+//        while let index = remover.firstIndex(of: arr2[i]) {
+//            result.append(remover.remove(at: index))
+//        }
+//    }
+//    while !remover.isEmpty {
+//        result.append(remover.removeFirst())
+//    }
+//
+//    return result
+//}
+//print(relativeSortArray([2,3,1,3,2,4,6,7,9,2,19], [2,1,4,3,9,6]))   // [2,2,2,1,4,3,3,9,6,7,19]
+//print(relativeSortArray([28,6,22,8,44,17], [22,28,8,6]))
+
+// 1160. Find Words That Can Be Formed by Characters
+//func countCharacters(_ words: [String], _ chars: String) -> Int {
+//    var result = 0
+//    for word in words {
+//        var muWord = word, muChars = chars
+//        checkWord : while !muWord.isEmpty {
+//            if let first = muWord.first, muChars.contains(first) {
+//                muChars.remove(at: muChars.firstIndex(of: muWord.removeFirst())!)
+//                if muWord.isEmpty {
+//                    result += word.count
+//                }
+//            } else {
+//                break checkWord
+//            }
+//        }
+//    }
+//    return result
+//}
+//print(countCharacters(["cat","bt","hat","tree"], "atach"))              // 6
+//print(countCharacters(["hello","world","leetcode"], "welldonehoneyr"))  // 10
+
+// 509. Fibonacci Number
+//func fib(_ n: Int) -> Int {
+//    return n > 1 ? fib(n-1) + fib(n-2) : n == 0 ? 0 : 1
+//}
+//print(fib(2))   // 1
+//print(fib(3))   // 2
+//print(fib(4))   // 3
+
+// 999. Available Captures for Rook
+//func numRookCaptures(_ board: [[Character]]) -> Int {
+//    var result = 0, rookIndex = (0, 0) // x, y
+//
+//    LookforY : for y in 0..<board.count {
+//        LookforX : for x in 0..<board[0].count {
+//            if board[y][x] == "R" {
+//                rookIndex = (y, x)
+//                break LookforY
+//            }
+//        }
+//    }
+//
+//    var colRook = [String](), col = 0
+//    for i in 0..<board.count {
+//        if board[i][rookIndex.1] != "." {
+//            colRook.append(String(board[i][rookIndex.1]))
+//            if board[i][rookIndex.1] == "R" {
+//                col = colRook.count-1
+//            }
+//        }
+//    }
+//    if col > 0 {
+//        if colRook[col-1] == "p" {
+//            result += 1
+//        }
+//    }
+//    if col + 1 < colRook.count {
+//        if colRook[col+1] == "p" {
+//            result += 1
+//        }
+//    }
+//
+//    var rowRook = [String](), row = 0
+//    for i in 0..<board[0].count {
+//        if board[rookIndex.0][i] != "." {
+//            rowRook.append(String(board[rookIndex.0][i]))
+//            if board[rookIndex.0][i] == "R" {
+//                row = rowRook.count-1
+//            }
+//        }
+//    }
+//    if row > 0 {
+//        if rowRook[row-1] == "p" {
+//            result += 1
+//        }
+//    }
+//    if row + 1 < rowRook.count {
+//        if rowRook[row+1] == "p" {
+//            result += 1
+//        }
+//    }
+//
+//    return result
+//}
+//print(numRookCaptures([[".",".",".",".",".",".",".","."],[".",".",".","p",".",".",".","."],[".",".",".","R",".",".",".","p"],[".",".",".",".",".",".",".","."],[".",".",".",".",".",".",".","."],[".",".",".","p",".",".",".","."],[".",".",".",".",".",".",".","."],[".",".",".",".",".",".",".","."]]))    // 3
+//print(numRookCaptures([[".",".",".",".",".",".",".","."],[".","p","p","p","p","p",".","."],[".","p","p","B","p","p",".","."],[".","p","B","R","B","p",".","."],[".","p","p","B","p","p",".","."],[".","p","p","p","p","p",".","."],[".",".",".",".",".",".",".","."],[".",".",".",".",".",".",".","."]]))    // 0
+//print(numRookCaptures([[".",".",".",".",".",".",".","."],[".",".",".","p",".",".",".","."],[".",".",".","p",".",".",".","."],["p","p",".","R",".","p","B","."],[".",".",".",".",".",".",".","."],[".",".",".","B",".",".",".","."],[".",".",".","p",".",".",".","."],[".",".",".",".",".",".",".","."]]))    // 3
+
+// TODO: 문제 이해필요
+// 1700. Number of Students Unable to Eat Lunch
+//func countStudents(_ students: [Int], _ sandwiches: [Int]) -> Int {
+//
+//}
+//print(countStudents([1,1,0,0], [0,1,0,1]))          // 0
+//print(countStudents([1,1,1,0,0,1], [1,0,0,0,1,1]))  // 3
+
+// TODO: 풀이 시도 필요
+// 1200. Minimum Absolute Difference
+//func minimumAbsDifference(_ arr: [Int]) -> [[Int]] {
+//    return [[]]
+//}
+//print(minimumAbsDifference([4,2,1,3]))                  // [[1,2],[2,3],[3,4]]
+//print(minimumAbsDifference([1,3,6,10,15]))              // [[1,3]]
+//print(minimumAbsDifference([3,8,-10,23,19,-4,-14,27]))  // [[-14,-10],[19,23],[23,27]]
+
+
