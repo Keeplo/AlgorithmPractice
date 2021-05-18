@@ -82,6 +82,18 @@ func getArray(_ head: ListNode?) -> [Int] {
 //print(getDecimalValue(getLinkedList([1])))  // 1
 //print(getDecimalValue(getLinkedList([1,0,0,1,0,0,1,1,1,0,0,0,0,0,0])))  // 18880
 //print(getDecimalValue(getLinkedList([0,0])))  // 0
+extension ListNode {
+    func getDecimalValue(_ head: ListNode?) -> Int {
+        var result: Int = 0
+        var curNode: ListNode? = head
+        while curNode != nil {
+            result = (result << 1) | curNode!.val
+            curNode = curNode!.next
+        }
+        return result
+    }
+}
+
 
 // 876. Middle of the Linked List
 //func getNode(_ head: ListNode?, _ depth: Int) -> ListNode? {
@@ -111,3 +123,48 @@ func getArray(_ head: ListNode?) -> [Int] {
 //}
 //print(middleNode(getLinkedList([1,2,3,4,5]))) //
 //print(middleNode(getLinkedList([1,2,3,4,5,6]))) //
+extension ListNode {
+    func middleNode(_ head: ListNode?) -> ListNode? {
+        guard head != nil else { return nil }
+        
+        var slow = head
+        var fast = head
+        
+        while fast != nil && fast!.next != nil {
+            slow = slow!.next
+            fast = fast!.next!.next
+        }
+        
+        // when fast has reached end of list, slow will be at halfway point because it's moved 1/2 as far
+        return slow
+    }
+}
+
+// MARK: --- 21.05.14
+// 237. Delete Node in a Linked List
+extension ListNode {
+    func deleteNode(_ node: ListNode?) {
+        guard let nextNode = node?.next else { return }
+
+        node?.val = nextNode.val
+        node?.next = nextNode.next
+    }
+}
+
+// 206. Reverse Linked List
+extension ListNode {
+    func reverseList(_ head: ListNode?) -> ListNode? {
+        return reverseListInternal(head, nil)
+      }
+    
+    func reverseListInternal(_ current: ListNode?, _ previous: ListNode?) -> ListNode? {
+        if current == nil { return previous }
+        
+        let next = current!.next
+        current!.next = previous
+        
+        return reverseListInternal(next, current)
+    }
+}
+
+// 
