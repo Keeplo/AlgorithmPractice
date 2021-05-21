@@ -130,25 +130,39 @@ func hasPathSum(_ root: TreeNode?, _ targetSum: Int) -> Bool {
 
 // Construct Binary Tree from Inorder and Postorder Traversal
 func buildTree(_ inorder: [Int], _ postorder: [Int]) -> TreeNode? {
-    var inn = inorder, post = postorder, tree = [Int?](repeating: nil, count: 3)
+    var inn = inorder, post = postorder
     
-    let root = TreeNode(post.removeLast(), nil, nil)
+    // inOrder = [leftSub(I), root , rightSub(I)]
+    // postOrder = [leftSub(P), rightSub(P), root ]
     
-    let inSubs = inn.split(separator: root.val).map({ Array($0) })
-    var postSubs = [[Int]](repeating: post, count: 2)
-    
-    for i in 0..<inSubs.count {
-        _ = inSubs[i].map({ postSubs[i].remove(at: postSubs[i].firstIndex(of: $0)! ) })
+    // leftSubTree = buildTree(leftSub(I), leftSub(P))
+    // rightSubTree = buildTree(rightSub(I), rightSub(P))
+    print("inn \(inn) post \(post)")
+    if post.isEmpty {
+        return nil
+    } else {
+        let root = TreeNode(post.removeLast(), nil, nil)
+            
+        let index = inn.firstIndex(of: root.val)!, next = inn.index(after: index)
+            
+        let inSubs = [Array(inn[inn.startIndex..<index]), Array(inn[next..<inn.endIndex])]
+//        let postSubs = [Array(post[0..<post.index(post.startIndex, offsetBy: inSubs[0].count)]), Array(post[post.index(after: post.index(post.startIndex, offsetBy: inSubs[0].count-1))..<post.endIndex])]
+        let postSubs = [Array(post)[0..<inSubs[0].count], Array(post)[inSubs[0].count..<post.endIndex]].map({ Array($0) })
         
+        print("inSubs \(inSubs)")
+        print("postSubs \(postSubs)")
         
+        if inSubs.count > 0, postSubs.count > 0 {
+            root.left = buildTree(inSubs[0], postSubs[0])
+        }
+        if inSubs.count > 1, postSubs.count > 1 {
+            root.right = buildTree(inSubs[1], postSubs[1])
+        }
+            
+        return root
     }
-    
-    
-    return root
 }
+// buildTree([9,3,15,20,7], [9,15,7,20,3])
 
-buildTree([9,3,15,20,7], [9,15,7,20,3])
-// inorder = [9,3,15,20,7], postorder = [9,15,7]
-// l root r
-// l r root
+// 
 
