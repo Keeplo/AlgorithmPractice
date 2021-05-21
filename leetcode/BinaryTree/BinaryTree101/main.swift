@@ -85,4 +85,70 @@ func levelOrder(_ root: TreeNode?) -> [[Int]] {
 }
 
 // MARK: --- Solve Problems Recursively
+// Maximum Depth of Binary Tree
+func maxDepth(_ root: TreeNode?) -> Int {
+    guard let r = root else { return 0 }
+    
+    let left = maxDepth(r.left)
+    let right = maxDepth(r.right)
+    
+    return max(left, right) + 1
+}
+
+// Symmetric Tree
+func isSymmetric(_ root: TreeNode?) -> Bool {
+    guard let r = root else { return true }
+    
+    func isMirror(_ left: TreeNode?, _ right: TreeNode?) -> Bool {
+        if left == nil && right == nil {
+            return true
+            
+        } else if let r = right, let l = left {
+            return r.val == l.val && isMirror(r.left, l.right) && isMirror(l.right, r.left)
+        }
+        
+        return false
+    }
+    
+    return isMirror(r, r)
+}
+
+// Path Sum
+func hasPathSum(_ root: TreeNode?, _ targetSum: Int) -> Bool {
+    guard let r = root else { return false }
+    
+    if r.left == nil, r.right == nil {
+        if targetSum - r.val == 0 {
+            return true
+        } else {
+            return false
+        }
+    } else {
+        return hasPathSum(r.left, targetSum - r.val) || hasPathSum(r.right, targetSum - r.val)
+    }
+}
+
+// Construct Binary Tree from Inorder and Postorder Traversal
+func buildTree(_ inorder: [Int], _ postorder: [Int]) -> TreeNode? {
+    var inn = inorder, post = postorder, tree = [Int?](repeating: nil, count: 3)
+    
+    let root = TreeNode(post.removeLast(), nil, nil)
+    
+    let inSubs = inn.split(separator: root.val).map({ Array($0) })
+    var postSubs = [[Int]](repeating: post, count: 2)
+    
+    for i in 0..<inSubs.count {
+        _ = inSubs[i].map({ postSubs[i].remove(at: postSubs[i].firstIndex(of: $0)! ) })
+        
+        
+    }
+    
+    
+    return root
+}
+
+buildTree([9,3,15,20,7], [9,15,7,20,3])
+// inorder = [9,3,15,20,7], postorder = [9,15,7]
+// l root r
+// l r root
 
